@@ -3,9 +3,9 @@ package com.galaxy.galaxyphoto.reponse
 import com.galaxy.galaxyphoto.model.ImageModel
 import com.google.gson.annotations.SerializedName
 
-data class ImageReponse(
+data class ImageResponse(
     @SerializedName("hits")
-    val hits: List<HitReponse>,
+    val hits: List<HitResponse>,
     @SerializedName("total")
     val total: Int,
     @SerializedName("totalHits")

@@ -7,18 +7,31 @@ import com.galaxy.galaxyphoto.domain.helpe.data
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
 import com.galaxy.galaxyphoto.model.ImageModel
 import com.galaxy.galaxyphoto.domain.Costan
+import com.galaxy.galaxyphoto.model.photo.PhotoModel
 
 class HomeViewModel(
     private val homeRepository: HomeRepository
 ) : BaseViewModel() {
     fun getListPhoto(
         context: Context,
-        key: String = Costan.API_KEY,
-        type: String = "",
+        onError: (String) -> Unit,
+        onFinish: (List<PhotoModel>) -> Unit
+        ) {
+        homeRepository.getPhotoList().subscribeToResource(
+            context, onError = {
+                onError(it.toString())
+            }
+        ) {
+            onFinish(it.data())
+        }
+    }
+    fun getPhotoFollowTags(
+        tags: String,
+        context: Context,
         onError: (String) -> Unit,
         onFinish: (ImageModel) -> Unit
         ) {
-        homeRepository.getPhotoList(key, type).subscribeToResource(
+        homeRepository.getPhotoFollowTags(tags).subscribeToResource(
             context, onError = {
                 onError(it.toString())
             }

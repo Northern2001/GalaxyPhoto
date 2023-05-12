@@ -1,8 +1,9 @@
-package com.galaxy.galaxyphoto.model
+package com.galaxy.galaxyphoto.reponse
 
+import com.galaxy.galaxyphoto.model.HitModel
 import com.google.gson.annotations.SerializedName
 
-data class Hit(
+data class HitResponse(
     @SerializedName("collections")
     val collections: Int,
     @SerializedName("comments")
@@ -48,4 +49,29 @@ data class Hit(
     @SerializedName("webformatWidth")
     val webFormatWidth: Int
 
-)
+) {
+    fun convertToModel() = HitModel(
+        collections = this.collections,
+        comments = this.comments,
+        downloads = this.downloads,
+        id = this.id,
+        imageHeight = this.imageHeight,
+        imageSize = this.imageSize,
+        imageWidth = this.imageWidth,
+        largeImageURL = this.largeImageURL,
+        likes = this.likes,
+        pageURL = this.pageURL,
+        previewHeight = this.previewHeight,
+        previewURL = this.previewURL,
+        previewWidth = this.previewWidth,
+        tags = this.tags,
+        type = this.type,
+        user = this.user,
+        userImageURL = this.userImageURL,
+        userId = this.userId,
+        views = this.views,
+        webFormatHeight = this.webFormatHeight,
+        webFormatURL = this.webFormatURL,
+        webFormatWidth = this.webFormatWidth,
+    )
+}

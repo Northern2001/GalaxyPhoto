@@ -26,5 +26,6 @@ data class HitModel(
     val views: Int = 0,
     val webFormatHeight: Int = 0,
     val webFormatURL: String = "",
-    val webFormatWidth: Int = 0
+    val webFormatWidth: Int = 0,
+    var isSelected: Boolean = false
 ) : Parcelable
