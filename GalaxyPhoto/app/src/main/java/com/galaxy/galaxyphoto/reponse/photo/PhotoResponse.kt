@@ -14,8 +14,6 @@ data class PhotoResponse(
     val color: String,
     @SerializedName("created_at")
     val createdAt: String,
-    @SerializedName("description")
-    val description: String,
     @SerializedName("height")
     val height: Int,
     @SerializedName("id")
@@ -40,7 +38,6 @@ data class PhotoResponse(
         blurHash = this.blurHash,
         color = this.color,
         createdAt = this.createdAt,
-        description = this.description,
         height = this.height,
         id = this.id,
         likedByUser = this.likedByUser,

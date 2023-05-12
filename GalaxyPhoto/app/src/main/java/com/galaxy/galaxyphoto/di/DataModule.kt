@@ -1,11 +1,11 @@
 package com.galaxy.galaxyphoto.di
 
 import android.content.Context
+import com.galaxy.galaxyphoto.domain.Costan
 import com.galaxy.galaxyphoto.domain.impl.HomeRepositoryImpl
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
-import com.galaxy.galaxyphoto.helper.JsonHelper
 import com.galaxy.galaxyphoto.domain.service.HomeService
-import com.galaxy.galaxyphoto.domain.Costan
+import com.galaxy.galaxyphoto.helper.JsonHelper
 import com.google.gson.Gson
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

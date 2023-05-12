@@ -9,7 +9,6 @@ data class PhotoModel(
     val blurHash: String = "",
     val color: String = "",
     val createdAt: String = "",
-    val description: String = "",
     val height: Int = 0,
     val id: String = "",
     val likedByUser: Boolean = false,
