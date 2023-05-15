@@ -1,7 +1,7 @@
 package com.galaxy.galaxyphoto.di
 
 import android.content.Context
-import com.galaxy.galaxyphoto.domain.Costan
+import com.galaxy.galaxyphoto.domain.Contains
 import com.galaxy.galaxyphoto.domain.impl.HomeRepositoryImpl
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
 import com.galaxy.galaxyphoto.domain.service.HomeService
@@ -21,7 +21,7 @@ val apisModule = module {
     single<HomeService> {
         createWebService(
             context = get(),
-            baseUrl = Costan.BASE_URL,
+            baseUrl = Contains.BASE_URL,
             gson = get()
         )
     }

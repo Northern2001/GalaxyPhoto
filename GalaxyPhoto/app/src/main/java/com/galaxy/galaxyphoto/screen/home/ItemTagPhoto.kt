@@ -1,4 +1,4 @@
-package com.galaxy.galaxyphoto.screen
+package com.galaxy.galaxyphoto.screen.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

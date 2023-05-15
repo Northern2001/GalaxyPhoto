@@ -3,6 +3,8 @@ package com.galaxy.galaxyphoto.domain.repository
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import io.reactivex.rxjava3.core.Single
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface HomeRepository {
 
@@ -15,5 +17,11 @@ interface HomeRepository {
         page: Int,
         perPage: Int
     ): Single<List<TopicsModel>>
+
+    fun getPhotoWithTopic(
+        slug: String,
+        page: Int,
+        perPage: Int
+    ): Single<List<PhotoModel>>
 
 }

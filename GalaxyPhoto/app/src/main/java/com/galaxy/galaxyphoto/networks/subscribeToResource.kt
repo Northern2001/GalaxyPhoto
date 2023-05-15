@@ -1,6 +1,8 @@
 package com.galaxy.galaxyphoto.networks
 
 import android.content.Context
+import android.util.Log
+import com.galaxy.galaxyphoto.common.ProgressManager
 import com.galaxy.galaxyphoto.domain.helpe.Resource
 import com.galaxy.galaxyphoto.domain.helpe.exception
 import com.galaxy.galaxyphoto.domain.helpe.isError
@@ -20,6 +22,9 @@ fun <E : Any> Single<E>.subscribeToResource(
             }
             it.isError() -> {
                 onError?.invoke(it.exception())
+                val message = it.exception().message.toString()
+                ProgressManager.current.showNotify(message)
+                Log.e("call api error", message)
             }
         }
     }

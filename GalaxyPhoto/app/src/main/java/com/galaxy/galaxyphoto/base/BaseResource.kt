@@ -14,6 +14,8 @@ import androidx.compose.ui.platform.LocalFocusManager
 import coil.compose.rememberAsyncImagePainter
 import coil.request.CachePolicy
 import coil.request.ImageRequest
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
 import com.skydoves.landscapist.glide.GlideImage
 
 @Composable
@@ -51,6 +53,10 @@ fun BaseResourceUrl(
         } else {
             GlideImage(
                 imageModel = url,
+                requestOptions = {
+                    RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .override(480, 360).transform()
+                },
                 contentScale = contentScale
             )
         }

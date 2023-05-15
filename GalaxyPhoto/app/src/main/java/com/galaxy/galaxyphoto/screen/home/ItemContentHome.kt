@@ -1,6 +1,7 @@
-package com.galaxy.galaxyphoto.screen
+package com.galaxy.galaxyphoto.screen.home
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -8,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.galaxy.galaxyphoto.R
@@ -16,9 +18,17 @@ import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.ui.theme.Shapes20dp
 
 @Composable
-fun ItemContentHome(model: PhotoModel) {
+fun ItemContentHome(model: PhotoModel, onLongPress: (PhotoModel) -> Unit) {
     Column(
-        modifier = Modifier.padding(end = 12.dp)
+        modifier = Modifier
+            .padding(end = 12.dp)
+            .pointerInput(model) {
+                detectTapGestures(
+                    onLongPress = {
+                        onLongPress(model)
+                    }
+                )
+            }
     ) {
         BaseResourceUrl(
             url = model.urls.thumb,

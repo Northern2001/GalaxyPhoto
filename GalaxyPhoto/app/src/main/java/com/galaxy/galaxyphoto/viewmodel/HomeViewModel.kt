@@ -1,8 +1,8 @@
 package com.galaxy.galaxyphoto.viewmodel
 
 import android.content.Context
-import androidx.lifecycle.MutableLiveData
 import com.galaxy.galaxyphoto.base.BaseViewModel
+import com.galaxy.galaxyphoto.base.showNotify
 import com.galaxy.galaxyphoto.domain.helpe.data
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
@@ -16,7 +16,7 @@ class HomeViewModel(
     fun getListPhoto(
         context: Context,
         page: Int = 1,
-        perPage: Int = 4,
+        perPage: Int = 10,
         onError: (String) -> Unit,
         onFinish: (List<PhotoModel>) -> Unit
     ) {
@@ -32,11 +32,31 @@ class HomeViewModel(
     fun getTopics(
         context: Context,
         page: Int = 1,
-        perPage: Int = 4,
+        perPage: Int = 10,
         onFinish: (List<TopicsModel>) -> Unit
     ) {
-        homeRepository.getTopics(page = page, perPage = perPage).subscribeToResource(
+        homeRepository.getTopics(page = page, perPage = perPage)
+            .subscribeToResource(
             context, onError = {
+            }
+        ) {
+            onFinish(it.data())
+        }
+    }
+
+    fun getPhotoWithTopic(
+        context: Context,
+        slug: String = "",
+        page: Int = 1,
+        perPage: Int = 4,
+        onError: (String) -> Unit,
+        onFinish: (List<PhotoModel>) -> Unit
+    ) {
+        homeRepository.getPhotoWithTopic(slug=slug,page = page, perPage = perPage)
+            .subscribeToResource(
+            context, onError = {
+                onError(it.toString())
+
             }
         ) {
             onFinish(it.data())

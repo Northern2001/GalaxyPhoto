@@ -1,9 +1,17 @@
 package com.galaxy.galaxyphoto.base
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.grid.LazyGridState
+import androidx.compose.material.Button
+import androidx.compose.material.Snackbar
+import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun LazyListState.InfiniteListHandler(
@@ -72,8 +80,8 @@ fun LazyListState.InfiniteListHandler(
 fun LazyListState.OnBottomReached(
     // tells how many items before we reach the bottom of the list
     // to call onLoadMore function
-    buffer : Int = 0,
-    onLoadMore : () -> Unit
+    buffer: Int = 0,
+    onLoadMore: () -> Unit
 ) {
     // Buffer must be positive.
     // Or our list will never reach the bottom.
@@ -82,19 +90,19 @@ fun LazyListState.OnBottomReached(
     val shouldLoadMore = remember {
         derivedStateOf {
             val lastVisibleItem = layoutInfo.visibleItemsInfo.lastOrNull()
-                ?:
-                return@derivedStateOf true
+                ?: return@derivedStateOf true
 
             // subtract buffer from the total items
-            lastVisibleItem.index >=  layoutInfo.totalItemsCount - 1 - buffer
+            lastVisibleItem.index >= layoutInfo.totalItemsCount - 1 - buffer
         }
     }
 
-    LaunchedEffect(shouldLoadMore){
+    LaunchedEffect(shouldLoadMore) {
         snapshotFlow { shouldLoadMore.value }
             .collect { if (it) onLoadMore() }
     }
 }
+
 @ExperimentalFoundationApi
 @Composable
 fun LazyGridState.InfiniteListHandler(
@@ -136,3 +144,28 @@ fun LazyGridState.InfiniteListHandler(
 //
 //    })
 }
+
+fun LazyGridState.isScrolledToTheEnd() =
+    layoutInfo.visibleItemsInfo.lastOrNull()?.index == layoutInfo.totalItemsCount - 1
+
+@Composable
+fun showNotify(context: Context, mess: String) {
+    Toast.makeText(context, mess, Toast.LENGTH_SHORT).show()
+//    Snackbar(
+//
+//        action = {
+//            Button(onClick = {}) {
+//                Text("MyAction")
+//            }
+//        },
+//        modifier = Modifier.padding(8.dp)
+//    ) { Text(text = "This is a snackbar!") }
+}
+//    Snackbar(modifier = Modifier) {
+//
+//        Text(text = mess)
+//    }
+//}
+
+
+

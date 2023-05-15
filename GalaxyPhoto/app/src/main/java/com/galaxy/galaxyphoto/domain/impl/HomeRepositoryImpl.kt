@@ -35,4 +35,21 @@ class HomeRepositoryImpl(
         }
     }
 
+    override fun getPhotoWithTopic(
+        slug: String,
+        page: Int,
+        perPage: Int
+    ): Single<List<PhotoModel>> {
+        return context.rxWithNetworkCheck {
+            homeService.getPhotoWithTopic(
+                slug = slug,
+                page = page,
+                perPage = perPage
+
+            )
+        }.map {
+            it.map { it.convertToModel() }
+        }
+    }
+
 }

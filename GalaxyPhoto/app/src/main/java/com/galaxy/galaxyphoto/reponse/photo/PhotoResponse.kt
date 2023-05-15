@@ -7,46 +7,46 @@ import com.google.gson.annotations.SerializedName
 
 data class PhotoResponse(
     @SerializedName("alt_description")
-    val altDescription: String,
+    val altDescription: String? = null,
     @SerializedName("blur_hash")
-    val blurHash: String,
+    val blurHash: String? = null,
     @SerializedName("color")
-    val color: String,
+    val color: String? = null,
     @SerializedName("created_at")
-    val createdAt: String,
+    val createdAt: String? = null,
     @SerializedName("height")
-    val height: Int,
+    val height: Int? = null,
     @SerializedName("id")
-    val id: String,
+    val id: String? = null,
     @SerializedName("liked_by_user")
-    val likedByUser: Boolean,
+    val likedByUser: Boolean? = null,
     @SerializedName("likes")
-    val likes: Int,
+    val likes: Int? = null,
     @SerializedName("slug")
-    val slug: String,
+    val slug: String? = null,
     @SerializedName("updated_at")
-    val updatedAt: String,
+    val updatedAt: String? = null,
     @SerializedName("urls")
-    val urls: UrlsModel,
+    val urls: UrlsModel? = null,
     @SerializedName("user")
-    val user: UserModel,
+    val user: UserModel? = null,
     @SerializedName("width")
-    val width: Int
-){
+    val width: Int? = null
+) {
     fun convertToModel() = PhotoModel(
-        altDescription = this.altDescription,
-        blurHash = this.blurHash,
-        color = this.color,
-        createdAt = this.createdAt,
-        height = this.height,
-        id = this.id,
-        likedByUser = this.likedByUser,
-        likes = this.likes,
-        slug = this.slug,
-        updatedAt = this.updatedAt,
-        urls = this.urls,
-        user = this.user,
-        width = this.width,
+        altDescription = this.altDescription ?: "",
+        blurHash = this.blurHash ?: "",
+        color = this.color ?: "",
+        createdAt = this.createdAt ?: "",
+        height = this.height ?: 0,
+        id = this.id ?: "",
+        likedByUser = this.likedByUser ?: false,
+        likes = this.likes ?: 0,
+        slug = this.slug ?: "",
+        updatedAt = this.updatedAt ?: "",
+        urls = this.urls ?: UrlsModel(),
+        user = this.user ?: UserModel(),
+        width = this.width ?: 0,
     )
 
 }
