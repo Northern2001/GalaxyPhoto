@@ -2,7 +2,8 @@ package com.galaxy.galaxyphoto.reponse.photo
 
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.photo.UrlsModel
-import com.galaxy.galaxyphoto.model.photo.UserModel
+import com.galaxy.galaxyphoto.model.user.UserModel
+import com.galaxy.galaxyphoto.reponse.user.UserResponse
 import com.google.gson.annotations.SerializedName
 
 data class PhotoResponse(
@@ -29,7 +30,7 @@ data class PhotoResponse(
     @SerializedName("urls")
     val urls: UrlsModel? = null,
     @SerializedName("user")
-    val user: UserModel? = null,
+    val user: UserResponse? = null,
     @SerializedName("width")
     val width: Int? = null
 ) {
@@ -45,7 +46,7 @@ data class PhotoResponse(
         slug = this.slug ?: "",
         updatedAt = this.updatedAt ?: "",
         urls = this.urls ?: UrlsModel(),
-        user = this.user ?: UserModel(),
+        user = this.user?.convertToModel() ?: UserModel(),
         width = this.width ?: 0,
     )
 

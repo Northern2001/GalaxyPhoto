@@ -17,6 +17,13 @@ val Shapes20dp = Shapes(
     large = RoundedCornerShape(20.dp),
 )
 
+val Shapes25dpTop = Shapes(
+    large = RoundedCornerShape(topStart = 25.dp, topEnd = 25.dp),
+)
+val Shapes25dpBottom = Shapes(
+    large = RoundedCornerShape(bottomEnd = 25.dp, bottomStart = 25.dp),
+)
+
 val Shapes18dp = Shapes(
     large = RoundedCornerShape(18.dp),
 )

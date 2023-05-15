@@ -16,7 +16,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun CircleImage(
-    icon: Int,
+    icon: Int? = null,
+    url: String = "",
     modifier: Modifier = Modifier
         .size(56.dp)
         .clip(RoundedCornerShape(28.dp))
@@ -28,12 +29,21 @@ fun CircleImage(
             onclick()
         })
     ) {
-        Image(
-            painter = painterResource(id = icon),
-            contentDescription = "",
-            modifier = Modifier.align(
-                Alignment.Center
+        if (url.isNotEmpty()) {
+            BaseResourceUrl(
+                url = url, modifier = Modifier.align(
+                    Alignment.Center
+                )
             )
-        )
+        }
+        icon?.let {
+            Image(
+                painter = painterResource(id = it),
+                contentDescription = "",
+                modifier = Modifier.align(
+                    Alignment.Center
+                )
+            )
+        }
     }
 }

@@ -9,17 +9,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun BaseButton(title: String, color: Color = Color.White, onClick: () -> Unit) {
+fun BaseButton(
+    title: String,
+    background: Color = Color.White,
+    color: Color = Color.White,
+    onClick: () -> Unit
+) {
     Text(
         text = title, modifier = Modifier
             .clip(RoundedCornerShape(24.dp))
-            .background(color = color)
+            .background(color = background)
             .padding(vertical = 10.dp, horizontal = 20.dp)
             .clickable {
                 onClick()
-            }
-    )
+            },
+        color = color,
+        fontWeight = FontWeight.SemiBold,
+        )
 }

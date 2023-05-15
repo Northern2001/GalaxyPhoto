@@ -28,6 +28,17 @@ class HomeViewModel(
             onFinish(it.data())
         }
     }
+    fun getPhotoDetail(
+        context: Context,
+        photoId: String,
+        onFinish: (PhotoModel) -> Unit
+    ) {
+        homeRepository.getPhotoDetail(photoId).subscribeToResource(
+            context,
+        ) {
+            onFinish(it.data())
+        }
+    }
 
     fun getTopics(
         context: Context,

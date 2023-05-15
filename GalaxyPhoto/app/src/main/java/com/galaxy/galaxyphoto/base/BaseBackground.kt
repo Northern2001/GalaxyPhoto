@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun BaseBackground(
+    modifier: Modifier = Modifier.padding(horizontal = 12.dp),
     verticalArrangement: Arrangement.Vertical = Arrangement.Top,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
     content: @Composable ColumnScope.() -> Unit
@@ -18,7 +19,7 @@ fun BaseBackground(
         modifier = Modifier
             .background(color = Color.Black)
             .fillMaxSize()
-            .padding(horizontal = 12.dp),
+            .then(modifier),
         verticalArrangement = verticalArrangement,
         horizontalAlignment = horizontalAlignment
     ) {

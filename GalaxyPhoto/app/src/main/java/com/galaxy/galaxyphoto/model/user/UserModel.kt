@@ -1,4 +1,4 @@
-package com.galaxy.galaxyphoto.model.photo
+package com.galaxy.galaxyphoto.model.user
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
@@ -19,5 +19,6 @@ data class UserModel(
     val totalPhotos: Int = 0,
     val twitterUsername: String = "",
     val updatedAt: String = "",
-    val username: String = ""
+    val username: String = "",
+    val profileImage: ProfileImageModel = ProfileImageModel()
 ) : Parcelable

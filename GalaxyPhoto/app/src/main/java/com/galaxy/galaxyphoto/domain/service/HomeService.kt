@@ -16,6 +16,12 @@ interface HomeService {
         @Query("per_page") perPage: Int
     ): Single<List<PhotoResponse>>
 
+    @GET("photos/{id}")
+    fun getPhotoDetail(
+        @Path("id") photoId: String,
+        @Query("client_id") key: String = Contains.API_KEY
+    ): Single<PhotoResponse>
+
     @GET("topics/")
     fun getTopics(
         @Query("client_id") key: String = Contains.API_KEY,

@@ -3,17 +3,18 @@ package com.galaxy.galaxyphoto.tabhome
 import androidx.compose.runtime.Composable
 import com.galaxy.galaxyphoto.common.BottomBarManager
 import com.galaxy.galaxyphoto.screen.home.HomeScreen
-import com.galaxy.galaxyphoto.screen.profile.ProfileScreen
+import com.galaxy.galaxyphoto.screen.home.PhotoDetailScreen
 
 @Composable
 fun DashBoardRouter() {
     when (BottomBarManager.current.tabSelected) {
         TabName.TAB_HOME -> {
-            HomeScreen()
+            PhotoDetailScreen()
         }
 
         TabName.TAB_PROFILE -> {
-            ProfileScreen()
+            HomeScreen()
+//            ProfileScreen()
         }
     }
 }

@@ -13,6 +13,10 @@ interface HomeRepository {
         perPage: Int
     ): Single<List<PhotoModel>>
 
+    fun getPhotoDetail(
+        photoId: String
+    ): Single<PhotoModel>
+
     fun getTopics(
         page: Int,
         perPage: Int

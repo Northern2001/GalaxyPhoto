@@ -24,6 +24,16 @@ class HomeRepositoryImpl(
         }
     }
 
+    override fun getPhotoDetail(photoId: String): Single<PhotoModel> {
+        return context.rxWithNetworkCheck {
+            homeService.getPhotoDetail(
+                photoId = photoId
+            )
+        }.map {
+            it.convertToModel()
+        }
+    }
+
     override fun getTopics(page: Int, perPage: Int): Single<List<TopicsModel>> {
         return context.rxWithNetworkCheck {
             homeService.getTopics(

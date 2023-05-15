@@ -1,6 +1,7 @@
 package com.galaxy.galaxyphoto.model.photo
 
 import android.os.Parcelable
+import com.galaxy.galaxyphoto.model.user.UserModel
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -17,5 +18,5 @@ data class PhotoModel(
     val updatedAt: String = "",
     val urls: UrlsModel = UrlsModel(),
     val user: UserModel = UserModel(),
-    val width: Int
+    val width: Int = 0
 ) : Parcelable
