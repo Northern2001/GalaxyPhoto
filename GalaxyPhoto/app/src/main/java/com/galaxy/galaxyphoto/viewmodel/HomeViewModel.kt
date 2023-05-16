@@ -16,6 +16,7 @@ class HomeViewModel(
     private val homeRepository: HomeRepository
 ) : BaseViewModel() {
     var listPhoto by mutableStateOf(listOf<PhotoModel>())
+    var listPhotoSearch by mutableStateOf(listOf<PhotoModel>())
     var listTopics by mutableStateOf(listOf<TopicsModel>())
     var photoModel by mutableStateOf(PhotoModel())
     var topicModel by mutableStateOf(TopicsModel())

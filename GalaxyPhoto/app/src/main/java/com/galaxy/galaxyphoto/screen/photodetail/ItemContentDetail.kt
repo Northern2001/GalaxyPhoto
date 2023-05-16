@@ -52,13 +52,5 @@ fun ItemContentDetail(
             modifier = Modifier
                 .clip(Shapes20dp.large)
         )
-        Image(
-            painter = painterResource(id = R.drawable.ic_three_dot_horizoltal),
-            contentDescription = "",
-            modifier = Modifier
-                .padding(vertical = 10.dp)
-                .fillMaxWidth(),
-            alignment = Alignment.BottomEnd
-        )
     }
 }

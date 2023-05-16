@@ -18,11 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.galaxy.galaxyphoto.base.BaseBackground
+import com.galaxy.galaxyphoto.base.BaseScrollview
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.nav.DestinationNameWithParam
 import com.galaxy.galaxyphoto.nav.RouterManager
+import com.galaxy.galaxyphoto.screen.photodetail.ItemContentDetail
 import com.galaxy.galaxyphoto.viewmodel.HomeViewModel
+import com.google.accompanist.flowlayout.FlowRow
 import org.koin.androidx.compose.getViewModel
 
 @Composable
@@ -99,35 +102,33 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
             isReload = false
         }
     }
-    BaseBackground {
-        if (homeViewModel.listTopics.isNotEmpty()) {
-            LazyRow(
-                state = listStateRow,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 12.dp)
-            ) {
-                items(homeViewModel.listTopics) {
-                    ItemTagPhoto(model = it) { modelSelected ->
-                        homeViewModel.listTopics.find { it.isSelected }?.isSelected = false
-                        it.isSelected = true
-                        getPhotoWithTopic(slug = modelSelected.slug)
-                        homeViewModel.reloadListTopic()
+    BaseBackground (Modifier){
+        BaseScrollview(){
+            if (homeViewModel.listTopics.isNotEmpty()) {
+                LazyRow(
+                    state = listStateRow,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(12.dp)
+                ) {
+                    items(homeViewModel.listTopics) {
+                        ItemTagPhoto(model = it) { modelSelected ->
+                            homeViewModel.listTopics.find { it.isSelected }?.isSelected = false
+                            it.isSelected = true
+                            getPhotoWithTopic(slug = modelSelected.slug)
+                            homeViewModel.reloadListTopic()
+                        }
                     }
                 }
             }
-        }
-        AnimatedVisibility(visible = homeViewModel.listPhoto.isNotEmpty()) {
-            LazyVerticalGrid(
-                state = listState,
-                columns = GridCells.Fixed(2),
-                modifier = Modifier.fillMaxHeight()
-            ) {
-                items(homeViewModel.listPhoto) {
-                    ItemContentHome(it, onLongPress = {}) { modelSelect ->
-                        navController?.navigate(
-                            DestinationNameWithParam.getPhotoDetail(it.id)
-                        )
+            AnimatedVisibility(visible = homeViewModel.listPhoto.isNotEmpty()) {
+                FlowRow(Modifier.padding(horizontal = 6.dp, vertical = 12.dp)) {
+                    homeViewModel.listPhoto.forEach {
+                        ItemContentDetail(it, onLongPress = {}) { modelSelect ->
+                            navController?.navigate(
+                                DestinationNameWithParam.getPhotoDetail(modelSelect.id)
+                            )
+                        }
                     }
                 }
             }

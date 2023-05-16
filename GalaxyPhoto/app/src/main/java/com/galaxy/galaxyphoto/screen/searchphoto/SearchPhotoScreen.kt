@@ -44,7 +44,7 @@ fun SearchPhotoScreen(homeViewModel: HomeViewModel = getViewModel()) {
 
     fun searchPhoto() {
         homeViewModel.searchPhotos(context, query = searchValue) {
-            homeViewModel.listPhoto = it.results
+            homeViewModel.listPhotoSearch = it.results
         }
     }
 
@@ -87,7 +87,7 @@ fun SearchPhotoScreen(homeViewModel: HomeViewModel = getViewModel()) {
             )
 
             FlowRow(Modifier.padding(horizontal = 6.dp, vertical = 12.dp)) {
-                homeViewModel.listPhoto.forEach {
+                homeViewModel.listPhotoSearch.forEach {
                     ItemContentDetail(it, onLongPress = {}) { modelSelect ->
                         navController?.navigate(
                             DestinationNameWithParam.getPhotoDetail(modelSelect.id)

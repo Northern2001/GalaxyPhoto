@@ -4,9 +4,21 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -69,6 +81,7 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
                     ) {
                         isSeePicture = false
                     }
+
                 else ->
                     BaseScrollview(modifier = Modifier.fillMaxHeight()) {
                         ItemPhoto(model.urls.full)
@@ -137,7 +150,7 @@ fun ItemPhoto(
                 contentDescription = "",
                 modifier = Modifier
                     .padding(20.dp)
-                    .fillMaxWidth(0.8f)
+                    .fillMaxWidth(0.9f)
                     .clickable {
                         if (isShowPicture) {
                             onHideImage?.invoke()
@@ -151,7 +164,7 @@ fun ItemPhoto(
                 painter = painterResource(id = R.drawable.ic_close),
                 contentDescription = "",
                 modifier = Modifier
-                    .padding(20.dp)
+                    .padding(top = 20.dp)
                     .clickable {
                         navController?.navigate(
                             DestinationName().bottomBar
