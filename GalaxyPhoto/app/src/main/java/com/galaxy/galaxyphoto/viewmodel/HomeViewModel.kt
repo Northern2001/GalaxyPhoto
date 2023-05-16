@@ -1,6 +1,9 @@
 package com.galaxy.galaxyphoto.viewmodel
 
 import android.content.Context
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import com.galaxy.galaxyphoto.base.BaseViewModel
 import com.galaxy.galaxyphoto.domain.helpe.data
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
@@ -12,6 +15,22 @@ import com.galaxy.galaxyphoto.reponse.photo.PhotoModelData
 class HomeViewModel(
     private val homeRepository: HomeRepository
 ) : BaseViewModel() {
+    var listPhoto by mutableStateOf(listOf<PhotoModel>())
+    var listTopics by mutableStateOf(listOf<TopicsModel>())
+    var photoModel by mutableStateOf(PhotoModel())
+    var topicModel by mutableStateOf(TopicsModel())
+
+    fun reloadListPhoto() {
+        val dummy = listPhoto
+        listPhoto = arrayListOf()
+        listPhoto = dummy
+    }
+
+    fun reloadListTopic() {
+        val dummy = listTopics
+        listTopics = arrayListOf()
+        listTopics = dummy
+    }
 
     fun getListPhoto(
         context: Context,

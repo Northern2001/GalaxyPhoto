@@ -23,14 +23,13 @@ fun ProfileScreen(
 ) {
     val context = LocalContext.current
     val navController = RouterManager.current.navController
-    var listCollections by remember { mutableStateOf(listOf<PhotoModel>()) }
 
     LaunchedEffect(Unit) {
         homeViewModel.getCollections(
             context = context,
             useName = userModel.username
         ) {
-            listCollections = it
+            homeViewModel.listPhoto = it
         }
     }
 
@@ -39,10 +38,10 @@ fun ProfileScreen(
         BaseScrollview() {
             GroupInfo(
                 userModel,
-                if (listCollections.isNotEmpty()) listCollections[0].urls.small else ""
+                if ( homeViewModel.listPhoto.isNotEmpty())  homeViewModel.listPhoto[0].urls.small else ""
             )
             FlowRow(Modifier.padding(horizontal = 6.dp, vertical = 12.dp)) {
-                listCollections.forEach {
+                homeViewModel.listPhoto.forEach {
                     ItemContentDetail(it, onLongPress = {}) { modelSelect ->
                         navController?.navigate(
                             DestinationNameWithParam.getPhotoDetail(modelSelect.id)

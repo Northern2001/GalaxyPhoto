@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -28,39 +29,29 @@ import org.koin.androidx.compose.getViewModel
 fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
 
     val context = LocalContext.current
-    var listPhoto by remember { mutableStateOf(listOf<PhotoModel>()) }
-    var listTopic by remember { mutableStateOf(listOf<TopicsModel>()) }
     var page by remember { mutableStateOf(1) }
     var pagePhotoTopic by remember { mutableStateOf(1) }
     var pageTopic by remember { mutableStateOf(1) }
     val listState = rememberLazyGridState()
     val listStateRow = rememberLazyListState()
     val navController = RouterManager.current.navController
+    var isReload by rememberSaveable { mutableStateOf(true) }
+
 //    var slug by remember { mutableStateOf("") }
 
-    fun reloadList() {
-        val dummy = listPhoto
-        listPhoto = arrayListOf()
-        listPhoto = dummy
-    }
 
-    fun reloadListTopic() {
-        val dummy = listTopic
-        listTopic = arrayListOf()
-        listTopic = dummy
-    }
 
     fun getListPhoto(isLoadMore: Boolean = false) {
         page = if (isLoadMore) page else 1
         homeViewModel.getListPhoto(context, page = page, onError = {
             Log.e("onError HomeScreen", it)
         }) { res ->
-            listPhoto = if (isLoadMore) listPhoto.toMutableList().also { newData ->
+            homeViewModel.listPhoto = if (isLoadMore) homeViewModel.listPhoto.toMutableList().also { newData ->
                 newData.addAll(res)
             } else {
                 res
             }
-            reloadList()
+            homeViewModel.reloadListPhoto()
         }
     }
 
@@ -72,12 +63,12 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
             page = pagePhotoTopic,
             perPage = 10,
         ) { res ->
-            listPhoto = if (isLoadMore) listPhoto.toMutableList().also { newData ->
+            homeViewModel.listPhoto = if (isLoadMore) homeViewModel.listPhoto.toMutableList().also { newData ->
                 newData.addAll(res)
             } else {
                 res
             }
-            reloadList()
+            homeViewModel.reloadListPhoto()
         }
     }
 
@@ -87,45 +78,52 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
             context,
             page = pageTopic,
         ) { res ->
-            listTopic = if (isLoadMore) listTopic.toMutableList().also { newData ->
+            homeViewModel.listTopics = if (isLoadMore) homeViewModel.listTopics.toMutableList().also { newData ->
                 newData.addAll(res)
             } else {
                 res
             }
-            reloadListTopic()
+            homeViewModel.reloadListTopic()
         }
     }
 
     LaunchedEffect(Unit) {
-        getListPhoto()
-        getTopics()
+        if (isReload){
+            getListPhoto()
+            getTopics()
+        }
     }
 
+    DisposableEffect(Unit){
+        onDispose {
+            isReload = false
+        }
+    }
     BaseBackground {
-        if (listTopic.isNotEmpty()) {
+        if (homeViewModel.listTopics.isNotEmpty()) {
             LazyRow(
                 state = listStateRow,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 12.dp)
             ) {
-                items(listTopic) {
+                items(homeViewModel.listTopics) {
                     ItemTagPhoto(model = it) { modelSelected ->
-                        listTopic.find { it.isSelected }?.isSelected = false
+                        homeViewModel.listTopics.find { it.isSelected }?.isSelected = false
                         it.isSelected = true
                         getPhotoWithTopic(slug = modelSelected.slug)
-                        reloadListTopic()
+                        homeViewModel.reloadListTopic()
                     }
                 }
             }
         }
-        AnimatedVisibility(visible = listPhoto.isNotEmpty()) {
+        AnimatedVisibility(visible = homeViewModel.listPhoto.isNotEmpty()) {
             LazyVerticalGrid(
                 state = listState,
                 columns = GridCells.Fixed(2),
                 modifier = Modifier.fillMaxHeight()
             ) {
-                items(listPhoto) {
+                items(homeViewModel.listPhoto) {
                     ItemContentHome(it, onLongPress = {}) { modelSelect ->
                         navController?.navigate(
                             DestinationNameWithParam.getPhotoDetail(it.id)

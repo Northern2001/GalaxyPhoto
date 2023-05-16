@@ -67,7 +67,7 @@ fun GroupInfo(model: UserModel, coverPhoto: String) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 15.dp),
+            .padding(vertical = 15.dp, horizontal = 12.dp),
     ) {
         Text(
             text = model.name,

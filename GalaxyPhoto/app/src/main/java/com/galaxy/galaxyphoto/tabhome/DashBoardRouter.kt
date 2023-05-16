@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import com.galaxy.galaxyphoto.common.BottomBarManager
 import com.galaxy.galaxyphoto.screen.home.HomeScreen
 import com.galaxy.galaxyphoto.screen.profile.ProfileScreen
+import com.galaxy.galaxyphoto.screen.searchphoto.SearchPhotoScreen
 
 @Composable
 fun DashBoardRouter() {
@@ -15,6 +16,10 @@ fun DashBoardRouter() {
 
         TabName.TAB_PROFILE -> {
             ProfileScreen()
+        }
+
+        TabName.TAB_SEARCH -> {
+            SearchPhotoScreen()
         }
     }
 }
