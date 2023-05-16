@@ -1,6 +1,7 @@
 package com.galaxy.galaxyphoto.screen.home
 
 import android.util.Log
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -16,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.galaxy.galaxyphoto.base.BaseBackground
-import com.galaxy.galaxyphoto.common.ProgressManager
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.nav.DestinationNameWithParam
@@ -102,32 +102,35 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
     }
 
     BaseBackground {
-        LazyRow(
-            state = listStateRow,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 12.dp)
-        ) {
-            items(listTopic) {
-                ItemTagPhoto(model = it) { modelSelected ->
-                    listTopic.find { it.isSelected }?.isSelected = false
-                    it.isSelected = true
-                    getPhotoWithTopic(slug = modelSelected.slug)
-                    reloadListTopic()
+        if (listTopic.isNotEmpty()) {
+            LazyRow(
+                state = listStateRow,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 12.dp)
+            ) {
+                items(listTopic) {
+                    ItemTagPhoto(model = it) { modelSelected ->
+                        listTopic.find { it.isSelected }?.isSelected = false
+                        it.isSelected = true
+                        getPhotoWithTopic(slug = modelSelected.slug)
+                        reloadListTopic()
+                    }
                 }
             }
         }
-
-        LazyVerticalGrid(
-            state = listState,
-            columns = GridCells.Fixed(2),
-            modifier = Modifier.fillMaxHeight()
-        ) {
-            items(listPhoto) {
-                ItemContentHome(it, onLongPress = {}) {modelSelect->
-                    navController?.navigate(
-                        DestinationNameWithParam.getPhotoDetail(it.id)
-                    )
+        AnimatedVisibility(visible = listPhoto.isNotEmpty()) {
+            LazyVerticalGrid(
+                state = listState,
+                columns = GridCells.Fixed(2),
+                modifier = Modifier.fillMaxHeight()
+            ) {
+                items(listPhoto) {
+                    ItemContentHome(it, onLongPress = {}) { modelSelect ->
+                        navController?.navigate(
+                            DestinationNameWithParam.getPhotoDetail(it.id)
+                        )
+                    }
                 }
             }
         }

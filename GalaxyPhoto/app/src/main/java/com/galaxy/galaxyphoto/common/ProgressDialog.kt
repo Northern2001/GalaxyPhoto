@@ -1,9 +1,12 @@
 package com.galaxy.galaxyphoto.common
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -32,6 +35,16 @@ fun ProgressDialog() {
         }
         delay(2000)
         ProgressManager.current.dismissShowNotify()
+    }
+
+    AnimatedVisibility(
+        visible = ProgressManager.current.isLoading,
+        enter = fadeIn(),
+        exit = fadeOut()
+    ) {
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        CircularProgressIndicator(color = Color.White)
+        }
     }
 
     AnimatedVisibility(

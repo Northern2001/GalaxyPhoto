@@ -15,10 +15,13 @@ fun <E : Any> Single<E>.subscribeToResource(
     onError: ((Throwable) -> Unit?)? = null,
     onSuccess: ((Resource<E>) -> Unit?)? = null,
 ): Disposable {
-    return doOnSubscribe {}.subscribeByResource {
+    return doOnSubscribe {
+        ProgressManager.current.loading()
+    }.subscribeByResource {
         when {
             it.isSuccess() -> {
                 onSuccess?.invoke(it)
+                ProgressManager.current.dismissLoading()
             }
             it.isError() -> {
                 onError?.invoke(it.exception())
