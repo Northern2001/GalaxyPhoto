@@ -6,6 +6,7 @@ import com.galaxy.galaxyphoto.domain.service.HomeService
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.networks.rxWithNetworkCheck
+import com.galaxy.galaxyphoto.reponse.photo.PhotoModelData
 import io.reactivex.rxjava3.core.Single
 
 class HomeRepositoryImpl(
@@ -56,6 +57,35 @@ class HomeRepositoryImpl(
                 page = page,
                 perPage = perPage
 
+            )
+        }.map {
+            it.map { it.convertToModel() }
+        }
+    }
+
+    override fun searchPhotos(query: String, page: Int, perPage: Int): Single<PhotoModelData> {
+        return context.rxWithNetworkCheck {
+            homeService.searchPhotos(
+                query = query,
+                page = page,
+                perPage = perPage
+
+            )
+        }.map {
+            it.convertToModel()
+        }
+    }
+
+    override fun getCollections(
+        useName: String,
+        page: Int,
+        perPage: Int
+    ): Single<List<PhotoModel>> {
+        return context.rxWithNetworkCheck {
+            homeService.getCollections(
+                userName = useName,
+                page = page,
+                perPage = perPage
             )
         }.map {
             it.map { it.convertToModel() }

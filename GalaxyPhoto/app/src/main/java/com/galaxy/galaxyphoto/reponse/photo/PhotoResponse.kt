@@ -1,6 +1,7 @@
 package com.galaxy.galaxyphoto.reponse.photo
 
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
+import com.galaxy.galaxyphoto.model.photo.TagsModel
 import com.galaxy.galaxyphoto.model.photo.UrlsModel
 import com.galaxy.galaxyphoto.model.user.UserModel
 import com.galaxy.galaxyphoto.reponse.user.UserResponse
@@ -32,7 +33,9 @@ data class PhotoResponse(
     @SerializedName("user")
     val user: UserResponse? = null,
     @SerializedName("width")
-    val width: Int? = null
+    val width: Int? = null,
+    @SerializedName("tags")
+    val tags: List<TagsResponse>? = null
 ) {
     fun convertToModel() = PhotoModel(
         altDescription = this.altDescription ?: "",
@@ -48,6 +51,18 @@ data class PhotoResponse(
         urls = this.urls ?: UrlsModel(),
         user = this.user?.convertToModel() ?: UserModel(),
         width = this.width ?: 0,
+        tags = this.tags?.map { it.convertToModel() } ?: arrayListOf(),
     )
+}
 
+data class TagsResponse(
+    @SerializedName("type")
+    val type: String? = null,
+    @SerializedName("title")
+    val title: String? = null,
+) {
+    fun convertToModel() = TagsModel(
+        type = this.type ?: "",
+        title = this.title ?: "",
+    )
 }

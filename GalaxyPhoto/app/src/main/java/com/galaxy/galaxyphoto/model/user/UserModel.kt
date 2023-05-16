@@ -20,5 +20,14 @@ data class UserModel(
     val twitterUsername: String = "",
     val updatedAt: String = "",
     val username: String = "",
-    val profileImage: ProfileImageModel = ProfileImageModel()
+    val profileImage: ProfileImageModel = ProfileImageModel(),
+    val social: SocialModel = SocialModel()
+) : Parcelable
+
+@Parcelize
+data class SocialModel(
+    val instagram: String = "",
+    val portfolio: String = "",
+    val twitter: String = "",
+    val email: String = "",
 ) : Parcelable

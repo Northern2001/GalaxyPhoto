@@ -19,6 +19,8 @@ import com.galaxy.galaxyphoto.base.BaseBackground
 import com.galaxy.galaxyphoto.common.ProgressManager
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
+import com.galaxy.galaxyphoto.nav.DestinationNameWithParam
+import com.galaxy.galaxyphoto.nav.RouterManager
 import com.galaxy.galaxyphoto.viewmodel.HomeViewModel
 import org.koin.androidx.compose.getViewModel
 
@@ -33,6 +35,7 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
     var pageTopic by remember { mutableStateOf(1) }
     val listState = rememberLazyGridState()
     val listStateRow = rememberLazyListState()
+    val navController = RouterManager.current.navController
 //    var slug by remember { mutableStateOf("") }
 
     fun reloadList() {
@@ -68,9 +71,6 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
             slug = slug,
             page = pagePhotoTopic,
             perPage = 10,
-            onError = {
-                ProgressManager.current.showNotify(it)
-            }
         ) { res ->
             listPhoto = if (isLoadMore) listPhoto.toMutableList().also { newData ->
                 newData.addAll(res)
@@ -124,8 +124,10 @@ fun HomeScreen(homeViewModel: HomeViewModel = getViewModel()) {
             modifier = Modifier.fillMaxHeight()
         ) {
             items(listPhoto) {
-                ItemContentHome(it) {
-
+                ItemContentHome(it, onLongPress = {}) {modelSelect->
+                    navController?.navigate(
+                        DestinationNameWithParam.getPhotoDetail(it.id)
+                    )
                 }
             }
         }

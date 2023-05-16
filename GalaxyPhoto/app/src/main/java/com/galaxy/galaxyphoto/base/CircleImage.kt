@@ -4,8 +4,9 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -18,16 +19,15 @@ import androidx.compose.ui.unit.dp
 fun CircleImage(
     icon: Int? = null,
     url: String = "",
-    modifier: Modifier = Modifier
-        .size(56.dp)
-        .clip(RoundedCornerShape(28.dp))
-        .background(color = Color.Black),
+    size: Int = 56,
     onclick: () -> Unit
 ) {
     Box(
-        modifier = modifier.then(Modifier.clickable {
-            onclick()
-        })
+        modifier = Modifier
+            .size(size.dp)
+            .clip(CircleShape)
+            .background(color = Color.Black)
+            .clickable { onclick() }
     ) {
         if (url.isNotEmpty()) {
             BaseResourceUrl(

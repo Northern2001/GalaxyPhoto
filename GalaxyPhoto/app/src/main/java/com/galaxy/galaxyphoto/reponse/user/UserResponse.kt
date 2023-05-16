@@ -1,6 +1,7 @@
 package com.galaxy.galaxyphoto.reponse.user
 
 import com.galaxy.galaxyphoto.model.user.ProfileImageModel
+import com.galaxy.galaxyphoto.model.user.SocialModel
 import com.galaxy.galaxyphoto.model.user.UserModel
 import com.google.gson.annotations.SerializedName
 
@@ -36,7 +37,9 @@ data class UserResponse(
     @SerializedName("username")
     val username: String? = null,
     @SerializedName("profile_image")
-    val profileImage: ProfileImageResponse? = null
+    val profileImage: ProfileImageResponse? = null,
+    @SerializedName("social")
+    val social: SocialResponse? = null,
 ) {
     fun convertToModel() = UserModel(
         acceptedTos = this.acceptedTos ?: false,
@@ -54,6 +57,26 @@ data class UserResponse(
         twitterUsername = this.twitterUsername ?: "",
         updatedAt = this.updatedAt ?: "",
         username = this.username ?: "",
-        profileImage = this.profileImage?.convertToModel() ?: ProfileImageModel()
+        profileImage = this.profileImage?.convertToModel() ?: ProfileImageModel(),
+        social = this.social?.convertToModel() ?: SocialModel()
     )
+}
+
+data class SocialResponse(
+    @SerializedName("instagramUsername")
+    val instagram: String? = null,
+    @SerializedName("portfolio_url")
+    val portfolio: String? = null,
+    @SerializedName("twitter_username")
+    val twitter: String? = null,
+    @SerializedName("paypal_email")
+    val mail: String? = null,
+) {
+    fun convertToModel() = SocialModel(
+        instagram = this.instagram ?: "",
+        portfolio = this.portfolio ?: "",
+        twitter = this.twitter ?: "",
+        email = this.mail ?: "",
+    )
+
 }

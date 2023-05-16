@@ -23,7 +23,7 @@ fun <E : Any> Single<E>.subscribeToResource(
             it.isError() -> {
                 onError?.invoke(it.exception())
                 val message = it.exception().message.toString()
-                ProgressManager.current.showNotify(message)
+                ProgressManager.current.showNotify(message,false)
                 Log.e("call api error", message)
             }
         }

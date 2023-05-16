@@ -48,6 +48,7 @@ android {
     }
 }
 
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -104,10 +105,14 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-compose:3.1.2"
 
     //noinspection GradleDependency
-    implementation"androidx.compose.runtime:runtime-livedata:$compose_version"
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
     //noinspection GradleDependency
-    implementation"androidx.compose.runtime:runtime:$compose_version"
+    implementation "androidx.compose.runtime:runtime:$compose_version"
     //noinspection GradleDependency
-    implementation"androidx.compose.compiler:compiler:$compose_version"
+    implementation "androidx.compose.compiler:compiler:$compose_version"
+    implementation "com.google.accompanist:accompanist-navigation-animation:0.28.0"
+    implementation "com.google.accompanist:accompanist-flowlayout:0.28.0"
+
+
 
 }

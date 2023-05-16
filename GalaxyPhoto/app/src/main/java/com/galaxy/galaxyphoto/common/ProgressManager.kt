@@ -8,14 +8,16 @@ import androidx.lifecycle.ViewModel
 class ProgressManager : ViewModel() {
     var isShowNotify by mutableStateOf(false)
     var contentNotify by mutableStateOf("")
+    var isSuccess by mutableStateOf(false)
 
     companion object {
         val current = ProgressManager()
     }
 
-    fun showNotify(content: String) {
+    fun showNotify(content: String,isSuccess : Boolean) {
         current.isShowNotify = true
         current.contentNotify = content
+        current.isSuccess = isSuccess
 
     }
 

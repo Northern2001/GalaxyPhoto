@@ -2,12 +2,12 @@ package com.galaxy.galaxyphoto.viewmodel
 
 import android.content.Context
 import com.galaxy.galaxyphoto.base.BaseViewModel
-import com.galaxy.galaxyphoto.base.showNotify
 import com.galaxy.galaxyphoto.domain.helpe.data
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.networks.subscribeToResource
+import com.galaxy.galaxyphoto.reponse.photo.PhotoModelData
 
 class HomeViewModel(
     private val homeRepository: HomeRepository
@@ -28,6 +28,7 @@ class HomeViewModel(
             onFinish(it.data())
         }
     }
+
     fun getPhotoDetail(
         context: Context,
         photoId: String,
@@ -48,30 +49,53 @@ class HomeViewModel(
     ) {
         homeRepository.getTopics(page = page, perPage = perPage)
             .subscribeToResource(
-            context, onError = {
+                context, onError = {
+                }
+            ) {
+                onFinish(it.data())
             }
-        ) {
-            onFinish(it.data())
-        }
     }
 
     fun getPhotoWithTopic(
         context: Context,
         slug: String = "",
         page: Int = 1,
-        perPage: Int = 4,
-        onError: (String) -> Unit,
+        perPage: Int = 10,
         onFinish: (List<PhotoModel>) -> Unit
     ) {
-        homeRepository.getPhotoWithTopic(slug=slug,page = page, perPage = perPage)
-            .subscribeToResource(
-            context, onError = {
-                onError(it.toString())
-
+        homeRepository.getPhotoWithTopic(slug = slug, page = page, perPage = perPage)
+            .subscribeToResource(context, onError = {}
+            ) {
+                onFinish(it.data())
             }
-        ) {
-            onFinish(it.data())
-        }
+    }
+
+    fun searchPhotos(
+        context: Context,
+        query: String = "",
+        page: Int = 1,
+        perPage: Int = 10,
+        onFinish: (PhotoModelData) -> Unit
+    ) {
+        homeRepository.searchPhotos(query = query, page = page, perPage = perPage)
+            .subscribeToResource(context, onError = {}
+            ) {
+                onFinish(it.data())
+            }
+    }
+
+    fun getCollections(
+        context: Context,
+        useName: String = "",
+        page: Int = 1,
+        perPage: Int = 10,
+        onFinish: (List<PhotoModel>) -> Unit,
+    ) {
+        homeRepository.getCollections(useName = useName, page = page, perPage = perPage)
+            .subscribeToResource(context, onError = {}
+            ) {
+                onFinish(it.data())
+            }
     }
 
 

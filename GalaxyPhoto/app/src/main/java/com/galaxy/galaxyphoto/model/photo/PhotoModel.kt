@@ -18,5 +18,12 @@ data class PhotoModel(
     val updatedAt: String = "",
     val urls: UrlsModel = UrlsModel(),
     val user: UserModel = UserModel(),
-    val width: Int = 0
+    val width: Int = 0,
+    val tags: List<TagsModel> = arrayListOf()
+) : Parcelable
+
+@Parcelize
+data class TagsModel(
+    val type: String = "",
+    val title: String = ""
 ) : Parcelable
