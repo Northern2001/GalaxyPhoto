@@ -22,7 +22,12 @@ import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.ui.theme.Shapes25dpBottom
 
 @Composable
-fun GroupUserAction(model: PhotoModel, onSeeProfile: () -> Unit, onSeePicture: () -> Unit) {
+fun GroupUserAction(
+    model: PhotoModel,
+    onSeeProfile: () -> Unit,
+    onSeePicture: () -> Unit,
+    saveImage: () -> Unit
+) {
     val context = LocalContext.current
     Column(
         modifier = Modifier
@@ -74,16 +79,7 @@ fun GroupUserAction(model: PhotoModel, onSeeProfile: () -> Unit, onSeePicture: (
                 title = "Save",
                 background = Color.Red
             ) {
-                (context as MainActivity).requestRxPermissions(
-                    onGranted = {
-                        downloadFileFromUrl(
-                            model.urls.full,
-                            context,
-                            getRandomString(5)
-                            )
-                    }
-                )
-
+                saveImage()
             }
         }
     }

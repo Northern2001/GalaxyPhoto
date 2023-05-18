@@ -28,6 +28,7 @@ fun <E : Any> Single<E>.subscribeToResource(
                 val message = it.exception().message.toString()
                 ProgressManager.current.showNotify(message,false)
                 Log.e("call api error", message)
+                ProgressManager.current.dismissLoading()
             }
         }
     }

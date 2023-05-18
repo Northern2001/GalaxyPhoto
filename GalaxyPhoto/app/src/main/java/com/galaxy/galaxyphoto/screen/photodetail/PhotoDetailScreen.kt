@@ -4,21 +4,10 @@ import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -29,10 +18,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.galaxy.galaxyphoto.MainActivity
 import com.galaxy.galaxyphoto.R
 import com.galaxy.galaxyphoto.base.BaseBackground
 import com.galaxy.galaxyphoto.base.BaseResourceUrl
 import com.galaxy.galaxyphoto.base.BaseScrollview
+import com.galaxy.galaxyphoto.common.downloadFileFromUrl
+import com.galaxy.galaxyphoto.common.getRandomString
+import com.galaxy.galaxyphoto.common.requestRxPermissions
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.nav.DestinationName
 import com.galaxy.galaxyphoto.nav.DestinationNameWithParam
@@ -48,23 +41,32 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewModel()) {
     val context = LocalContext.current
-    var model by remember { mutableStateOf(PhotoModel()) }
-    var listPhotoSuggestion by remember { mutableStateOf(listOf<PhotoModel>()) }
     val navController = RouterManager.current.navController
     var isSeePicture by remember { mutableStateOf(false) }
+    var isReLoad by rememberSaveable { mutableStateOf(true) }
 
 
     fun searchPhotoTags(model: PhotoModel) {
-        homeViewModel.searchPhotos(context, model.tags[0].title) {
-            listPhotoSuggestion = it.results
+        if (model.tags.isNotEmpty()) {
+            homeViewModel.searchPhotos(context, model.tags[0].title) {
+                homeViewModel.listPhotoDetail = it.results
+            }
         }
     }
 
 
     LaunchedEffect(Unit) {
-        homeViewModel.getPhotoDetail(context, idPhoto) {
-            model = it
-            searchPhotoTags(it)
+        if (isReLoad) {
+            homeViewModel.getPhotoDetail(context, idPhoto) {
+                homeViewModel.photoModelDetail = it
+                searchPhotoTags(it)
+            }
+        }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            isReLoad = false
         }
     }
 
@@ -73,7 +75,7 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
             when (it) {
                 true ->
                     ItemPhoto(
-                        model.urls.full,
+                        homeViewModel.photoModelDetail.urls.full,
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(top = 12.dp),
@@ -84,15 +86,29 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
 
                 else ->
                     BaseScrollview(modifier = Modifier.fillMaxHeight()) {
-                        ItemPhoto(model.urls.full)
-                        GroupUserAction(model, onSeeProfile = {
+                        ItemPhoto(homeViewModel.photoModelDetail.urls.full)
+                        GroupUserAction(homeViewModel.photoModelDetail, onSeeProfile = {
                             navController?.navigate(
                                 DestinationNameWithParam.getUserProfile(
-                                    Gson().toJson(model.user)
+                                    Gson().toJson(homeViewModel.photoModelDetail.user)
                                 )
                             )
-                        }) {
+                        }, onSeePicture = {
                             isSeePicture = true
+                        }) {
+//                            homeViewModel.downLoadPhoto(
+//                                context, homeViewModel.photoModelDetail.id
+//                            )
+//                            {}
+                            (context as MainActivity).requestRxPermissions(
+                                onGranted = {
+                                    downloadFileFromUrl(
+                                        homeViewModel.photoModelDetail.urls.full,
+                                        context,
+                                        getRandomString(5)
+                                    )
+                                }
+                            )
                         }
                         Column(
                             Modifier
@@ -112,7 +128,7 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
                                     .align(Alignment.CenterHorizontally),
                             )
                             FlowRow {
-                                listPhotoSuggestion.forEach {
+                                homeViewModel.listPhotoDetail.forEach {
                                     ItemContentDetail(it, onLongPress = {}) { modelSelect ->
                                         navController?.navigate(
                                             DestinationNameWithParam.getPhotoDetail(modelSelect.id)

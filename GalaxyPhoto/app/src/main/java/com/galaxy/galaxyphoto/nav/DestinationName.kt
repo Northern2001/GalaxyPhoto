@@ -23,4 +23,11 @@ class DestinationName(isParam: Boolean = false) {
     } else {
         "profileScreen"
     }
+
+    val createCollection = if (isParam) {
+        "createCollection"
+    } else {
+        "createCollection"
+    }
+
 }

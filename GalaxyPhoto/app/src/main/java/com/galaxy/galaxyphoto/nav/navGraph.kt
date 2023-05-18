@@ -6,6 +6,8 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.navigation
 import com.galaxy.galaxyphoto.common.BottomBarScreen
 import com.galaxy.galaxyphoto.model.user.UserModel
+import com.galaxy.galaxyphoto.screen.collection.CollectionScreen
+import com.galaxy.galaxyphoto.screen.collection.CreateCollectionScreen
 import com.galaxy.galaxyphoto.screen.home.SplashScreen
 import com.galaxy.galaxyphoto.screen.photodetail.PhotoDetailScreen
 import com.galaxy.galaxyphoto.screen.profile.ProfileScreen
@@ -42,6 +44,10 @@ fun NavGraphBuilder.authGraph() {
                     UserModel()
                 }
             )
+        }
+
+        composable(DestinationName(true).createCollection) {
+            CreateCollectionScreen()
         }
     }
 }

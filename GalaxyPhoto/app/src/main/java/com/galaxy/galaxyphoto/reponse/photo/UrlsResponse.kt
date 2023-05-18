@@ -5,24 +5,28 @@ import com.google.gson.annotations.SerializedName
 
 data class UrlsResponse(
     @SerializedName("full")
-    val full: String,
+    val full: String? = null,
     @SerializedName("raw")
-    val raw: String,
+    val raw: String? = null,
     @SerializedName("regular")
-    val regular: String,
+    val regular: String? = null,
     @SerializedName("small")
-    val small: String,
+    val small: String? = null,
     @SerializedName("small_s3")
-    val smallS3: String,
+    val smallS3: String? = null,
     @SerializedName("thumb")
-    val thumb: String
+    val thumb: String? = null,
+    @SerializedName("url")
+    val url: String? = null
+
+
 ) {
     fun convertToModel() = UrlsModel(
-         full = this.full,
-        raw = this.raw,
-        regular = this.regular,
-        small = this.small,
-        smallS3 = this.smallS3,
-        thumb = this.thumb,
+        full = this.full ?: "",
+        raw = this.raw ?: "",
+        regular = this.regular ?: "",
+        small = this.small ?: "",
+        smallS3 = this.smallS3 ?: "",
+        thumb = this.thumb ?: "",
     )
 }

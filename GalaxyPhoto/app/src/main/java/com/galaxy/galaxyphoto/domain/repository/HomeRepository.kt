@@ -1,9 +1,12 @@
 package com.galaxy.galaxyphoto.domain.repository
 
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
+import com.galaxy.galaxyphoto.model.photo.UrlsModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.reponse.photo.PhotoModelData
+import com.galaxy.galaxyphoto.reponse.photo.PhotoResponse
 import io.reactivex.rxjava3.core.Single
+import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -40,5 +43,9 @@ interface HomeRepository {
         page: Int,
         perPage: Int
     ): Single<List<PhotoModel>>
+
+    fun downLoadPhoto(
+        id: String,
+    ): Single<UrlsModel>
 
 }

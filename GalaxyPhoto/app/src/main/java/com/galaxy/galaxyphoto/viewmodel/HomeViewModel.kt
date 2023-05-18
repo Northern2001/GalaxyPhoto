@@ -8,6 +8,7 @@ import com.galaxy.galaxyphoto.base.BaseViewModel
 import com.galaxy.galaxyphoto.domain.helpe.data
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
+import com.galaxy.galaxyphoto.model.photo.UrlsModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.networks.subscribeToResource
 import com.galaxy.galaxyphoto.reponse.photo.PhotoModelData
@@ -16,10 +17,26 @@ class HomeViewModel(
     private val homeRepository: HomeRepository
 ) : BaseViewModel() {
     var listPhoto by mutableStateOf(listOf<PhotoModel>())
+    var listPhotoWithTopic by mutableStateOf(listOf<PhotoModel>())
     var listPhotoSearch by mutableStateOf(listOf<PhotoModel>())
+    var listPhotoDetail by mutableStateOf(listOf<PhotoModel>())
+    var photoModelDetail by mutableStateOf(PhotoModel())
     var listTopics by mutableStateOf(listOf<TopicsModel>())
-    var photoModel by mutableStateOf(PhotoModel())
     var topicModel by mutableStateOf(TopicsModel())
+
+//    val photoPager =  Pager(
+//        PagingConfig(10)
+//    ){
+//        PhotoDataSource(repository = homeRepository)
+//    }.flow.cachedIn(viewModelScope)
+
+    fun addFistTopic() {
+        listTopics = listTopics.toMutableList().also {
+            val model = TopicsModel(title = "All", isSelected = true)
+            it.add(0, model)
+            reloadListTopic()
+        }
+    }
 
     fun reloadListPhoto() {
         val dummy = listPhoto
@@ -73,6 +90,7 @@ class HomeViewModel(
                 }
             ) {
                 onFinish(it.data())
+                addFistTopic()
             }
     }
 
@@ -112,6 +130,18 @@ class HomeViewModel(
         onFinish: (List<PhotoModel>) -> Unit,
     ) {
         homeRepository.getCollections(useName = useName, page = page, perPage = perPage)
+            .subscribeToResource(context, onError = {}
+            ) {
+                onFinish(it.data())
+            }
+    }
+
+    fun downLoadPhoto(
+        context: Context,
+        id: String,
+        onFinish: (UrlsModel) -> Unit,
+    ) {
+        homeRepository.downLoadPhoto(id = id)
             .subscribeToResource(context, onError = {}
             ) {
                 onFinish(it.data())

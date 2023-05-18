@@ -4,6 +4,7 @@ import android.content.Context
 import com.galaxy.galaxyphoto.domain.repository.HomeRepository
 import com.galaxy.galaxyphoto.domain.service.HomeService
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
+import com.galaxy.galaxyphoto.model.photo.UrlsModel
 import com.galaxy.galaxyphoto.model.topic.TopicsModel
 import com.galaxy.galaxyphoto.networks.rxWithNetworkCheck
 import com.galaxy.galaxyphoto.reponse.photo.PhotoModelData
@@ -89,6 +90,14 @@ class HomeRepositoryImpl(
             )
         }.map {
             it.map { it.convertToModel() }
+        }
+    }
+
+    override fun downLoadPhoto(id: String): Single<UrlsModel> {
+        return context.rxWithNetworkCheck {
+            homeService.downLoadPhoto(id)
+        }.map {
+            it.convertToModel()
         }
     }
 

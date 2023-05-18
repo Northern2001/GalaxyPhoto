@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.galaxy.galaxyphoto.tabhome.TabName
 
 class BottomBarManager : ViewModel() {
-    var tabSelected by mutableStateOf(TabName.TAB_HOME)
+    var tabSelected by mutableStateOf(TabName.TAB_COLLECTION)
 
     companion object {
         val current = BottomBarManager()

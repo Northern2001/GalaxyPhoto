@@ -10,5 +10,6 @@ data class UrlsModel(
     val regular: String = "",
     val small: String = "",
     val smallS3: String = "",
-    val thumb: String = ""
+    val thumb: String = "",
+    val url: String = ""
 ) : Parcelable
