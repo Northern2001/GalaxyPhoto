@@ -26,7 +26,7 @@ fun SplashScreen(authViewModel: AuthViewModel = getViewModel()) {
     val context = LocalContext.current
 
     LaunchedEffect(Unit) {
-        authViewModel.getAccessToken(context)
+//        authViewModel.getAccessToken(context)
 //        authViewModel.createAccessToken(context){}
         delay(Contains.TIME_SEARCH)
         navController?.navigate(

@@ -46,7 +46,7 @@ val apisModule = module {
     single<AuthService> {
         createWebService(
             context = get(),
-            baseUrl = Contains.BASE_URL,
+            baseUrl = Contains.BASE_URL_AUTH,
             gson = get()
         )
     }

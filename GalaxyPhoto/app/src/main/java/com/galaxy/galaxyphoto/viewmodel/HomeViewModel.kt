@@ -23,16 +23,12 @@ class HomeViewModel(
     var photoModelDetail by mutableStateOf(PhotoModel())
     var listTopics by mutableStateOf(listOf<TopicsModel>())
     var topicModel by mutableStateOf(TopicsModel())
-
-//    val photoPager =  Pager(
-//        PagingConfig(10)
-//    ){
-//        PhotoDataSource(repository = homeRepository)
-//    }.flow.cachedIn(viewModelScope)
+    var pageTopic by mutableStateOf(1)
+    var pagePhoto by mutableStateOf(1)
 
     fun addFistTopic() {
         listTopics = listTopics.toMutableList().also {
-            val model = TopicsModel(title = "All", isSelected = true)
+            val model = TopicsModel(title = "For You", isSelected = true)
             it.add(0, model)
             reloadListTopic()
         }
@@ -52,17 +48,19 @@ class HomeViewModel(
 
     fun getListPhoto(
         context: Context,
-        page: Int = 1,
-        perPage: Int = 10,
-        onError: (String) -> Unit,
-        onFinish: (List<PhotoModel>) -> Unit
+        isLoadMore: Boolean = false,
     ) {
-        homeRepository.getPhotoList(page = page, perPage = perPage).subscribeToResource(
-            context, onError = {
-                onError(it.toString())
-            }
+        pagePhoto = if (isLoadMore) pagePhoto else 1
+        homeRepository.getPhotoList(page = pagePhoto, perPage = 20).subscribeToResource(
+            context,
         ) {
-            onFinish(it.data())
+            listPhoto =
+                if (isLoadMore) listPhoto.toMutableList().also { newData ->
+                    newData.addAll(it.data())
+                } else {
+                    it.data()
+                }
+            reloadListPhoto()
         }
     }
 
@@ -80,17 +78,20 @@ class HomeViewModel(
 
     fun getTopics(
         context: Context,
-        page: Int = 1,
-        perPage: Int = 10,
-        onFinish: (List<TopicsModel>) -> Unit
+        isLoadMore: Boolean = false,
     ) {
-        homeRepository.getTopics(page = page, perPage = perPage)
-            .subscribeToResource(
-                context, onError = {
+        pageTopic = if (isLoadMore) pageTopic else 1
+        homeRepository.getTopics(page = pageTopic, perPage = 10)
+            .subscribeToResource(context) {
+                listTopics =
+                    if (isLoadMore) listTopics.toMutableList().also { newData ->
+                        newData.addAll(it.data())
+                    } else {
+                        it.data()
+                    }
+                if (isLoadMore.not()){
+                    addFistTopic()
                 }
-            ) {
-                onFinish(it.data())
-                addFistTopic()
             }
     }
 
