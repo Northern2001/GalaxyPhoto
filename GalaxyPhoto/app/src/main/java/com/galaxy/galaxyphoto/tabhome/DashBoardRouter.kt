@@ -13,17 +13,17 @@ fun DashBoardRouter() {
         TabName.TAB_HOME -> {
             HomeScreen()
         }
-
-        TabName.TAB_PROFILE -> {
-            ProfileScreen()
-        }
+//
+//        TabName.TAB_PROFILE -> {
+//            ProfileScreen()
+//        }
 
         TabName.TAB_SEARCH -> {
             SearchPhotoScreen()
         }
 
-        TabName.TAB_COLLECTION -> {
-            CollectionScreen()
-        }
+//        TabName.TAB_COLLECTION -> {
+//            CollectionScreen()
+//        }
     }
 }

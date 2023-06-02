@@ -6,8 +6,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.navigation
 import com.galaxy.galaxyphoto.common.BottomBarScreen
 import com.galaxy.galaxyphoto.model.user.UserModel
-import com.galaxy.galaxyphoto.screen.collection.CollectionScreen
 import com.galaxy.galaxyphoto.screen.collection.CreateCollectionScreen
+import com.galaxy.galaxyphoto.screen.home.LoginScreen
+import com.galaxy.galaxyphoto.screen.home.LoginWebView
 import com.galaxy.galaxyphoto.screen.home.SplashScreen
 import com.galaxy.galaxyphoto.screen.photodetail.PhotoDetailScreen
 import com.galaxy.galaxyphoto.screen.profile.ProfileScreen
@@ -25,6 +26,17 @@ fun NavGraphBuilder.authGraph() {
         composable(DestinationName(true).splashScreen) {
             SplashScreen()
         }
+
+        composable(DestinationName(true).loginScreen) {
+            LoginScreen()
+        }
+
+        composable(DestinationName(true).loginWebView) {
+            LoginWebView(
+                it.arguments?.getString(ParamName.URL_WEB_VIEW) ?: ""
+            )
+        }
+
         composable(DestinationName(true).bottomBar) {
             BottomBarScreen()
         }

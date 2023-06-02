@@ -2,8 +2,206 @@ package com.galaxy.galaxyphoto.domain
 
 object Contains {
     const val BASE_URL = "https://api.unsplash.com/"
-    const val ACCESS_KEY = "1DLDrIlooKQqdkBYyhYBYuNHf81pR6zLxB3I0dJ7fMQ"
-    const val SECRET_KEY = "pnp2EZb-rDfi0SlNqX0LsEtSACBKwQ4p35OtOwDoqgE"
+    const val BASE_URL_AUTH = "https://unsplash.com/"
+    const val ACCESS_KEY = "_iqBL9niuq522850mGnzK4x82TH1Mt52BzmQRke0NNE"
+    const val SECRET_KEY = "pWWrtOTd33xSNRMGFm4-DJYb97buufV6dd6I4Oz3S5s"
     const val REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
     const val TIME_SEARCH = 500L
+
+    const val HTML = "<html>\n" +
+            "<head>\n" +
+            "  <meta charset=\"UTF-8\" />\n" +
+            "<script type=\"text/javascript\">window.NREUM||(NREUM={});NREUM.info={\"beacon\":\"bam.nr-data.net\",\"errorBeacon\":\"bam.nr-data.net\",\"licenseKey\":\"d44beae01c\",\"applicationID\":\"5042907\",\"transactionName\":\"IVtdFksMCA1XQBhWBRdAW01YFhAJXUBeQwUWXVwMSkwKBEU=\",\"queueTime\":10,\"applicationTime\":80,\"agent\":\"\"}</script>\n" +
+            "<script type=\"text/javascript\">(window.NREUM||(NREUM={})).init={ajax:{deny_list:[\"bam.nr-data.net\"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:\"d44beae01c\",applicationID:\"5042907\"};;(()=>{\"use strict\";var e,t,n={8768:(e,t,n)=>{n.d(t,{T:()=>r,p:()=>i});const r=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),i=r&&Boolean(\"undefined\"==typeof SharedWorker)},2919:(e,t,n)=>{n.d(t,{P_:()=>h,Mt:()=>p,C5:()=>c,DL:()=>w,OP:()=>N,lF:()=>C,Yu:()=>A,Dg:()=>v,CX:()=>u,GE:()=>y,sU:()=>I});var r={};n.r(r),n.d(r,{agent:()=>x,match:()=>k,version:()=>_});var i=n(6797),o=n(4286);const a={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},s={};function c(e){if(!e)throw new Error(\"All info objects require an agent identifier!\");if(!s[e])throw new Error(\"Info for \".concat(e,\" was never set\"));return s[e]}function u(e,t){if(!e)throw new Error(\"All info objects require an agent identifier!\");s[e]=new o.I(t,a),(0,i.Qy)(e,s[e],\"info\")}var d=n(2797),f=n(2374);const l={allow_bfcache:!0,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function h(e){if(!e)throw new Error(\"All configuration objects require an agent identifier!\");if(!g[e])throw new Error(\"Configuration for \".concat(e,\" was never set\"));return g[e]}function v(e,t){if(!e)throw new Error(\"All configuration objects require an agent identifier!\");g[e]=new o.I(t,l),(0,i.Qy)(e,g[e],\"config\")}function p(e,t){if(!e)throw new Error(\"All configuration objects require an agent identifier!\");var n=h(e);if(n){for(var r=t.split(\".\"),i=0;i<r.length-1;i++)if(\"object\"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function w(e){if(!e)throw new Error(\"All loader-config objects require an agent identifier!\");if(!b[e])throw new Error(\"LoaderConfig for \".concat(e,\" was never set\"));return b[e]}function y(e,t){if(!e)throw new Error(\"All loader-config objects require an agent identifier!\");b[e]=new o.I(t,m),(0,i.Qy)(e,b[e],\"loader_config\")}const A=(0,i.mF)().o;var x=null,_=null;const j=/Version\\/(\\S+)\\s+Safari/;if(navigator.userAgent){var D=navigator.userAgent,E=D.match(j);E&&-1===D.indexOf(\"Chrome\")&&-1===D.indexOf(\"Chromium\")&&(x=\"Safari\",_=E[1])}function k(e,t){if(!x)return!1;if(e!==x)return!1;if(!t)return!0;if(!_)return!1;for(var n=_.split(\".\"),r=t.split(\".\"),i=0;i<r.length;i++)if(r[i]!==n[i])return!1;return!0}var S=n(1651);const T={buildEnv:S.Re,bytesSent:{},queryBytesSent:{},customTransaction:void 0,disabled:!1,distMethod:S.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(f._A?.performance?.timeOrigin||f._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:\"\"+f._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:\"function\"==typeof f._A.XMLHttpRequest?.prototype?.addEventListener,userAgent:r,version:S.q4},P={};function N(e){if(!e)throw new Error(\"All runtime objects require an agent identifier!\");if(!P[e])throw new Error(\"Runtime for \".concat(e,\" was never set\"));return P[e]}function I(e,t){if(!e)throw new Error(\"All runtime objects require an agent identifier!\");P[e]=new o.I(t,T),(0,i.Qy)(e,P[e],\"runtime\")}function C(e){return function(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},4286:(e,t,n)=>{n.d(t,{I:()=>o});var r=n(909),i=n(8610);class o{constructor(e,t){Object.assign(this,function(e,t){const n={};try{return e&&\"object\"==typeof e?t&&\"object\"==typeof t?(Object.assign(n,t),Object.entries(e).forEach((e=>{let[o,a]=e;if(!Object.keys(t).includes(o))return;const s=(0,r.q)(o);s.length&&a&&\"object\"==typeof a&&s.forEach((e=>{e in a&&((0,i.Z)('\"'.concat(e,'\" is a protected attribute and can not be changed in feature ').concat(o,\".  It will have no effect.\")),delete a[e])})),n[o]=a})),n):(0,i.Z)(\"Setting a Configurable requires a model to set its initial properties\"):(0,i.Z)(\"New setting a Configurable requires an object as input\")}catch(e){(0,i.Z)(\"An error occured while setting a Configurable\",e)}}(e,t))}}},1651:(e,t,n)=>{n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r=\"1.232.0\",i=\"PROD\",o=\"CDN\"},9557:(e,t,n)=>{n.d(t,{w:()=>o});var r=n(8610);const i={agentIdentifier:\"\",ee:void 0};class o{constructor(e){try{if(\"object\"!=typeof e)return(0,r.Z)(\"shared context requires an object as input\");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)(\"An error occured while setting SharedContext\",e)}}}},4329:(e,t,n)=>{n.d(t,{L:()=>d,R:()=>c});var r=n(3752),i=n(7022),o=n(4045),a=n(2325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:\"\",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:\"feature\";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const n=Array.from(s[e]);function a(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)f(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit(\"drain-\"+t,[])}}n.every((e=>{let[t,n]=e;return n.staged}))&&(n.sort(((e,t)=>e[1].priority-t[1].priority)),n.forEach((e=>{let[t]=e;a(t)})))}function f(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,n)=>{n.d(t,{ee:()=>u});var r=n(6797),i=n(3916),o=n(7022),a=n(2919),s=\"nr@context\";let c=(0,r.fP)();var u;function d(){}function f(){return new d}function l(){u.aborted=!0,u.backlog={}}c.ee?u=c.ee:(u=function e(t,n){var r={},c={},g={},h=!1;try{h=16===n.length&&(0,a.OP)(n).isolatedBacklog}catch(e){}var v={on:b,addEventListener:b,removeEventListener:w,emit:m,get:A,listeners:y,context:p,buffer:x,abort:l,aborted:!1,isBuffering:_,debugId:n,backlog:h?{}:t&&\"object\"==typeof t.backlog?t.backlog:{}};return v;function p(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,f):f()}function m(e,n,r,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,n,r);for(var a=p(r),s=y(e),d=s.length,f=0;f<d;f++)s[f].apply(a,n);var l=j()[c[e]];return l&&l.push([v,e,n,a]),a}}function b(e,t){r[e]=y(e).concat(t)}function w(e,t){var n=r[e];if(n)for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)}function y(e){return r[e]||[]}function A(t){return g[t]=g[t]||e(v,t)}function x(e,t){var n=j();v.aborted||(0,o.D)(e,(function(e,r){t=t||\"feature\",c[r]=t,t in n||(n[t]=[])}))}function _(e){return!!j()[c[e]]}function j(){return v.backlog}}(void 0,\"globalEE\"),c.ee=u)},9252:(e,t,n)=>{n.d(t,{E:()=>r,p:()=>i});var r=n(3752).ee.get(\"handle\");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4045:(e,t,n)=>{n.d(t,{X:()=>o});var r=n(9252);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o=\"feature\"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},8544:(e,t,n)=>{n.d(t,{bP:()=>s,iz:()=>c,m\$:()=>a});var r=n(2374);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener(\"test\",null,e),r._A.removeEventListener(\"test\",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(n,r))}},5526:(e,t,n)=>{n.d(t,{Rl:()=>a,ky:()=>s});var r=n(2374);const i=\"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx\";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(31))),i.split(\"\").map((e=>\"x\"===e?o(t,++n).toString(16):\"y\"===e?(3&o()|8).toString(16):e)).join(\"\")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(31)));const a=[];for(var s=0;s<e;s++)a.push(o(n,++i).toString(16));return a.join(\"\")}},2797:(e,t,n)=>{n.d(t,{Bq:()=>r,Hb:()=>o,oD:()=>i});const r=\"NRBA\",i=144e5,o=18e5},2053:(e,t,n)=>{function r(){return Math.round(performance.now())}n.d(t,{z:()=>r})},8610:(e,t,n)=>{function r(e,t){\"function\"==typeof console.warn&&(console.warn(\"New Relic: \".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},3916:(e,t,n)=>{n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,n)=>{n.d(t,{_A:()=>o,il:()=>r,v6:()=>i});const r=Boolean(\"undefined\"!=typeof window&&window.document),i=Boolean(\"undefined\"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(r)return window;if(i){if(\"undefined\"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like \"self\" and \"window\".')})()},7022:(e,t,n)=>{n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},2438:(e,t,n)=>{n.d(t,{P:()=>o});var r=n(3752);const i=()=>{const e=new WeakSet;return(t,n)=>{if(\"object\"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit(\"internal-error\",[e])}catch(e){}}}},2650:(e,t,n)=>{n.d(t,{K:()=>a,b:()=>o});var r=n(8544);function i(){return\"undefined\"==typeof document||\"complete\"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)(\"load\",e,t)}function a(e){if(i())return e();(0,r.iz)(\"DOMContentLoaded\",e)}},6797:(e,t,n)=>{n.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var r=n(2053),i=n(2374);const o={beacon:\"bam.nr-data.net\",errorBeacon:\"bam.nr-data.net\"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,n){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.z)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[n]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,n)=>{n.d(t,{N:()=>i});var r=n(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;return void(0,r.iz)(\"visibilitychange\",(function(){if(t)return void(\"hidden\"==document.visibilityState&&e());e(document.visibilityState)}),n,i)}},6034:(e,t,n)=>{n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(2325).D.metrics,i=\"sm\",o=\"cm\",a=\"storeSupportabilityMetrics\",s=\"storeEventMetrics\"},2484:(e,t,n)=>{n.d(t,{Dz:()=>i,OJ:()=>a,qw:()=>o,t9:()=>r});const r=n(2325).D.pageViewEvent,i=\"firstbyte\",o=\"domcontent\",a=\"windowload\"},6382:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(2325).D.pageViewTiming},1509:(e,t,n)=>{n.d(t,{W:()=>s});var r=n(2919),i=n(3752),o=n(2384),a=n(6797);class s{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,r.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=n,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,r.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,r.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,n)=>{n.d(t,{j:()=>b});var r=n(2325),i=n(2919),o=n(9252),a=n(3752),s=n(2053),c=n(4329),u=n(2650),d=n(2374),f=n(8610),l=n(6034),g=n(6797);function h(){const e=(0,g.gG)();[\"setErrorHandler\",\"finished\",\"addToTrace\",\"inlineHit\",\"addRelease\",\"addPageAction\",\"setCurrentRouteName\",\"setPageViewName\",\"setCustomAttribute\",\"interaction\",\"noticeError\",\"setUserId\"].forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var v=n(7022);const p={stn:[r.D.sessionTrace],err:[r.D.jserrors,r.D.metrics],ins:[r.D.pageAction],spa:[r.D.spa]};const m={};function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,w=arguments.length>3?arguments[3]:void 0,{init:y,info:A,loader_config:x,runtime:_={loaderType:b},exposed:j=!0}=t;const D=(0,g.gG)();A||(y=D.init,A=D.info,x=D.loader_config),A.jsAttributes??={},d.v6&&(A.jsAttributes.isWorker=!0),(0,i.CX)(e,A),(0,i.Dg)(e,y||{}),(0,i.GE)(e,x||{}),(0,i.sU)(e,_),h();const E=function(e,t){t||(0,c.R)(e,\"api\");const g={};var h=a.ee.get(e),v=h.get(\"tracer\"),p=\"api-\",m=p+\"ixn-\";function b(t,n,r,o){const a=(0,i.C5)(e);return null===n?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),A(p,r,!0,o||null===n?\"session\":void 0)(t,n)}function w(){}[\"setErrorHandler\",\"finished\",\"addToTrace\",\"inlineHit\",\"addRelease\"].forEach((e=>g[e]=A(p,e,!0,\"api\"))),g.addPageAction=A(p,\"addPageAction\",!0,r.D.pageAction),g.setCurrentRouteName=A(p,\"routeName\",!0,r.D.spa),g.setPageViewName=function(t,n){if(\"string\"==typeof t)return\"/\"!==t.charAt(0)&&(t=\"/\"+t),(0,i.OP)(e).customTransaction=(n||\"http://custom.transaction\")+t,A(p,\"setPageViewName\",!0)()},g.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(\"string\"==typeof e){if([\"string\",\"number\"].includes(typeof t)||null===t)return b(e,t,\"setCustomAttribute\",n);(0,f.Z)(\"Failed to execute setCustomAttribute.\\nNon-null value must be a string or number type, but a type of <\".concat(typeof t,\"> was provided.\"))}else(0,f.Z)(\"Failed to execute setCustomAttribute.\\nName must be a string type, but a type of <\".concat(typeof e,\"> was provided.\"))},g.setUserId=function(e){if(\"string\"==typeof e||null===e)return b(\"enduser.id\",e,\"setUserId\",!0);(0,f.Z)(\"Failed to execute setUserId.\\nNon-null value must be a string type, but a type of <\".concat(typeof e,\"> was provided.\"))},g.interaction=function(){return(new w).get()};var y=w.prototype={createTracer:function(e,t){var n={},i=this,a=\"function\"==typeof t;return(0,o.p)(m+\"tracer\",[(0,s.z)(),e,n],i,r.D.spa,h),function(){if(v.emit((a?\"\":\"no-\")+\"fn-start\",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw v.emit(\"fn-err\",[arguments,this,\"string\"==typeof e?new Error(e):e],n),e}finally{v.emit(\"fn-end\",[(0,s.z)()],n)}}}};function A(e,t,n,i){return function(){return(0,o.p)(l.xS,[\"API/\"+t+\"/called\"],void 0,r.D.metrics,h),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,h),n?void 0:this}}function x(){n.e(439).then(n.bind(n,5692)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,\"api\")})).catch((()=>(0,f.Z)(\"Downloading runtime APIs failed...\")))}return[\"actionText\",\"setName\",\"setAttribute\",\"save\",\"ignore\",\"onEnd\",\"getContext\",\"end\",\"get\"].forEach((e=>{y[e]=A(m,e,void 0,r.D.spa)})),g.noticeError=function(e,t){\"string\"==typeof e&&(e=new Error(e)),(0,o.p)(l.xS,[\"API/noticeError/called\"],void 0,r.D.metrics,h),(0,o.p)(\"err\",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,h)},d.v6?x():(0,u.b)((()=>x()),!0),g}(e,w);return(0,g.Qy)(e,E,\"api\"),(0,g.Qy)(e,j,\"exposed\"),(0,g.EZ)(\"activatedFeatures\",m),(0,g.EZ)(\"setToken\",(t=>function(e,t){var n=a.ee.get(t);e&&\"object\"==typeof e&&((0,v.D)(e,(function(e,t){if(!t)return(p[e]||[]).forEach((t=>{(0,o.p)(\"block-\"+e,[],void 0,t,n)}));m[e]||((0,o.p)(\"feat-\"+e,[],void 0,p[e],n),m[e]=!0)})),(0,c.L)(t,r.D.pageViewEvent))}(t,e))),E}},909:(e,t,n)=>{n.d(t,{Z:()=>i,q:()=>o});var r=n(2325);function i(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}function o(e){return e===r.D.jserrors?[]:[\"auto\"]}},2325:(e,t,n)=>{n.d(t,{D:()=>r,p:()=>i});const r={ajax:\"ajax\",jserrors:\"jserrors\",metrics:\"metrics\",pageAction:\"page_action\",pageViewEvent:\"page_view_event\",pageViewTiming:\"page_view_timing\",sessionTrace:\"session_trace\",spa:\"spa\"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>(({78:\"page_action-aggregate\",147:\"metrics-aggregate\",193:\"session_trace-aggregate\",242:\"session-manager\",317:\"jserrors-aggregate\",348:\"page_view_timing-aggregate\",439:\"async-api\",729:\"lazy-loader\",786:\"page_view_event-aggregate\",873:\"spa-aggregate\",898:\"ajax-aggregate\"}[e]||e)+\".\"+{78:\"64dc4751\",147:\"c2ad263a\",193:\"c0ef217a\",242:\"2a8d47d1\",317:\"017d6ea4\",348:\"ddd91465\",439:\"ad3273bd\",729:\"c8cd494b\",786:\"5a238c1f\",873:\"342172b1\",875:\"2c240adb\",898:\"666f66ea\"}[e]+\"-1.232.0.min.js\"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t=\"NRBA:\",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName(\"script\"),d=0;d<u.length;d++){var f=u[d];if(f.getAttribute(\"src\")==n||f.getAttribute(\"data-webpack\")==t+o){s=f;break}}s||(c=!0,(s=document.createElement(\"script\")).charset=\"utf-8\",s.timeout=120,i.nc&&s.setAttribute(\"nonce\",i.nc),s.setAttribute(\"data-webpack\",t+o),s.src=n),e[n]=[r];var l=(t,r)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},g=setTimeout(l.bind(null,void 0,{type:\"timeout\",target:s}),12e4);s.onerror=l.bind(null,s.onerror),s.onload=l.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{\"undefined\"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:\"Module\"}),Object.defineProperty(e,\"__esModule\",{value:!0})},i.j=71,i.p=\"https://js-agent.newrelic.com/\",(()=>{var e={71:0,131:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&(\"load\"===n.type?\"missing\":n.type),a=n&&n.target&&n.target.src;s.message=\"Loading chunk \"+t+\" failed.\\n(\"+o+\": \"+a+\")\",s.name=\"ChunkLoadError\",s.type=o,s.request=a,r[1](s)}}),\"chunk-\"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=window.webpackChunkNRBA=window.webpackChunkNRBA||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})();var o={};(()=>{i.r(o);var e=i(2325),t=i(2919);const n=Object.values(e.D);function r(e){const r={};return n.forEach((n=>{r[n]=function(e,n){return!1!==(0,t.Mt)(n,\"\".concat(e,\".enabled\"))}(n,e)})),r}var a=i(2384),s=i(909),c=i(9252),u=i(8768),d=i(4329),f=i(1509),l=i(2650),g=i(2374),h=i(8610);class v extends f.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.hasAggregator=!1,this.auto=r,this.abortHandler,r&&(0,d.R)(e,n)}importAggregator(){if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{setupAgentSession:e}=await i.e(242).then(i.bind(i,2011));e(this.agentIdentifier);const{lazyLoader:t}=await i.e(729).then(i.bind(i,8110)),{Aggregate:n}=await t(this.featureName,\"aggregate\");new n(this.agentIdentifier,this.aggregator)}catch(e){(0,h.Z)(\"Downloading \".concat(this.featureName,\" failed...\"),e),this.abortHandler?.()}};g.v6?e():(0,l.b)((()=>e()),!0)}}var p=i(2484),m=i(2053);class b extends v{static featureName=p.t9;constructor(n,r){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(n,r,p.t9,i),(\"undefined\"==typeof PerformanceNavigationTiming||u.T)&&\"undefined\"!=typeof PerformanceTiming){const r=(0,t.OP)(n);r[p.Dz]=Math.max(Date.now()-r.offset,0),(0,l.K)((()=>r[p.qw]=Math.max((0,m.z)()-r[p.Dz],0))),(0,l.b)((()=>{const t=(0,m.z)();r[p.OJ]=Math.max(t-r[p.Dz],0),(0,c.p)(\"timing\",[\"load\",t],void 0,e.D.pageViewTiming,this.ee)}))}this.importAggregator()}}var w=i(9557),y=i(7022);class A extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,y.D)(e,(function(e,n){t[e]=x(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,y.D)(n,(function(e,t){if(\"count\"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=x(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=_(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=x(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n=\"\",r=!1,i=0;i<e.length;i++)t[n=e[i]]=j(this.aggregatedData[n]),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=_(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function _(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function j(e){return\"object\"!=typeof e?[]:(0,y.D)(e,D)}function D(e,t){return t}var E=i(6797),k=i(5526),S=i(2438);var T=i(6998),P=i(8544),N=i(6382);class I extends v{static featureName=N.t;constructor(e,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,n,N.t,r),g.il&&((0,t.OP)(e).initHidden=Boolean(\"hidden\"===document.visibilityState),(0,T.N)((()=>(0,c.p)(\"docHidden\",[(0,m.z)()],void 0,N.t,this.ee)),!0),(0,P.bP)(\"pagehide\",(()=>(0,c.p)(\"winPagehide\",[(0,m.z)()],void 0,N.t,this.ee))),this.importAggregator())}}const C=Boolean(g._A?.Worker),O=Boolean(g._A?.SharedWorker),R=Boolean(g._A?.navigator?.serviceWorker);let M,B,z;var q=i(6034);class W extends v{static featureName=q.t9;constructor(t,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(t,n,q.t9,r),function(e){if(!M){if(C){M=Worker;try{g._A.Worker=n(M,\"Dedicated\")}catch(e){o(e,\"Dedicated\")}if(O){B=SharedWorker;try{g._A.SharedWorker=n(B,\"Shared\")}catch(e){o(e,\"Shared\")}}else r(\"Shared\");if(R){z=navigator.serviceWorker.register;try{g._A.navigator.serviceWorker.register=(t=z,function(){for(var e=arguments.length,n=new Array(e),r=0;r<e;r++)n[r]=arguments[r];return i(\"Service\",n[1]?.type),t.apply(navigator.serviceWorker,n)})}catch(e){o(e,\"Service\")}}else r(\"Service\");var t;return}r(\"All\")}function n(e,t){return\"undefined\"==typeof Proxy?e:new Proxy(e,{construct:(e,n)=>(i(t,n[1]?.type),new e(...n))})}function r(t){g.v6||e(\"Workers/\".concat(t,\"/Unavailable\"))}function i(t,n){e(\"Workers/\".concat(t,\"module\"===n?\"/Module\":\"/Classic\"))}function o(t,n){e(\"Workers/\".concat(n,\"/SM/Unsupported\")),(0,h.Z)(\"NR Agent: Unable to capture \".concat(n,\" workers.\"),t)}}((t=>(0,c.p)(q.xS,[t],void 0,e.D.metrics,this.ee))),this.importAggregator()}}new class{constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,k.ky)(16);this.agentIdentifier=t,this.sharedAggregator=new A({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(b),Object.assign(this,(0,a.j)(this.agentIdentifier,e,e.loaderType||\"agent\")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){const t=\"features\";try{const n=r(this.agentIdentifier),i=Array.from(this.desiredFeatures);i.sort(((t,n)=>e.p[t.featureName]-e.p[n.featureName])),i.forEach((t=>{if(n[t.featureName]||t.featureName===e.D.pageViewEvent){const e=(0,s.Z)(t.featureName);e.every((e=>n[e]))||(0,h.Z)(\"\".concat(t.featureName,\" is enabled but one or more dependent features has been disabled (\").concat((0,S.P)(e),\"). This may cause unintended consequences or missing data...\")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,E.Qy)(this.agentIdentifier,this.features,t)}catch(e){(0,h.Z)(\"Failed to initialize all enabled instrument classes (agent aborted) -\",e);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,E.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[b,I,W],loaderType:\"lite\"})})(),window.NRBA=o})();</script>\n" +
+            "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n" +
+            "<meta name=\"mobile-web-app-capable\" content=\"yes\">\n" +
+            "<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n" +
+            "<meta name=\"apple-mobile-web-app-title\" content=\"Unsplash\">\n" +
+            "<meta name=\"application-name\" content=\"Unsplash\">\n" +
+            "\n" +
+            "<title>\n" +
+            "    Authorize GalaxyPhoto1 | Unsplash\n" +
+            "</title>\n" +
+            "\n" +
+            "<meta name=\"description\" content=\"\n" +
+            "    Do-whatever-you-want free HD photos. Gifted by the world&#39;s most generous community of photographers.\n" +
+            "\">\n" +
+            "<meta name=\"author\" content=\"Unsplash\">\n" +
+            "<meta name=\"csrf-param\" content=\"authenticity_token\" />\n" +
+            "<meta name=\"csrf-token\" content=\"IfbfmW3ULy4n4ZXVcvtA+NSvyBftH0OVnt6JuO3Qywr10Hkd6KbcZ2cAGO2JXf2nAYqnC53EP6BClN0Y7zxDPg==\" />\n" +
+            "\n" +
+            "<link rel=\"stylesheet\" media=\"all\" href=\"https://unsplash.com/assets/application-6b8cc88a552e8bf79b1bfb1c632e6ad7c0efe73b1efd4b659a2c598cd60b8e91.css\" />\n" +
+            "\n" +
+            "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">\n" +
+            "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n" +
+            "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n" +
+            "<link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg\" color=\"#000000\">\n" +
+            "\n" +
+            "<meta name=\"msapplication-config\" content=\"browserconfig.xml\">\n" +
+            "<meta name=\"msapplication-TileColor\" content=\"#ffffff\">\n" +
+            "<meta name=\"msapplication-TileImage\" content=\"/mstile-144x144.png\">\n" +
+            "<meta name=\"theme-color\" content=\"#ffffff\">\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "</head>\n" +
+            "<body class=\"\">\n" +
+            "\n" +
+            "\n" +
+            "<div class=\"js-flash-container\"></div>\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "<div class=\"navbar-container\">\n" +
+            "  <div class=\"navbar flex flex-center js-global-nav\">\n" +
+            "    <div class=\"flex-push\">\n" +
+            "      <div class=\"navbar__logo-container flex flex-center\">\n" +
+            "        <a href=\"/\" title=\"Home &mdash; Unsplash\">\n" +
+            "          <img class=\"navbar__logo \" src=\"https://unsplash.com/assets/core/logo-black-ddbdd505b663faadbc1e1731369f0929b2616886cb1d7fe11237c473bba02a50.svg\" />\n" +
+            "        </a>\n" +
+            "        <a class=\"navbar__logo-text\" href=\"/\" title=\"Unsplash\">\n" +
+            "          <span class=\"hidden-xs\" style=\"line-height: 1;\">Unsplash</span>\n" +
+            "        </a>\n" +
+            "      </div>\n" +
+            "    </div>\n" +
+            "\n" +
+            "    <ul class=\"nav flex flex-center\">\n" +
+            "      <li class=\"navbar__element--last-child\">\n" +
+            "        <div class=\"dropdown\">\n" +
+            "  <a href=\"#\" class=\"dropdown-toggle dropdown-toggle-avatar block\" id=\"user-dropdown\" data-toggle=\"dropdown\">\n" +
+            "    <img ix-src=\"https://images.unsplash.com/profile-1685331519485-9963e32dd687image?ixlib=rb-4.0.3&amp;crop=faces&amp;fit=crop&amp;w=32&amp;h=32\" sizes=\"32px\" class=\"avatar avatar--small\">\n" +
+            "    <span class=\"sr-only\">bac nguyen</span>\n" +
+            "  </a>\n" +
+            "\n" +
+            "  <ul class=\"dropdown-menu dropdown-menu-right\" style=\"margin-top: 10px; font-size: 14px; text-align: left\">\n" +
+            "    <li>\n" +
+            "      <a href=\"/@northern1807\">\n" +
+            "        View profile\n" +
+            "</a>    </li>\n" +
+            "    <li>\n" +
+            "      <a href=\"/@northern1807/stats\" class=\"link--no-underline\">Stats</a>\n" +
+            "    </li>\n" +
+            "    <li><a href=\"/account\">Account settings</a></li>\n" +
+            "    <li>\n" +
+            "      <a href=\"/logout\">\n" +
+            "        Logout @northern1807\n" +
+            "</a>    </li>\n" +
+            "  </ul>\n" +
+            "</div>\n" +
+            "\n" +
+            "      </li>\n" +
+            "    </ul>\n" +
+            "  </div>\n" +
+            "</div>\n" +
+            "\n" +
+            "\n" +
+            "<div class=\"container authorization-container\">\n" +
+            "  <div class=\"vertical-wrapper\">\n" +
+            "    <div class=\"vertical-cell\">\n" +
+            "      <div class=\"row authorization\">\n" +
+            "        <div class=\"col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 text-center\">\n" +
+            "          <div class=\"authorization__connect\">\n" +
+            "            <img src=\"https://unsplash.com/assets/api/application-connect-fa4fd12d4c7494a2ed809c7fd183a11dd22e04d11f1ae8a083360dd67ad595a4.svg\" class=\"authorization__icon\">\n" +
+            "          </div>\n" +
+            "\n" +
+            "          <div class=\"group\">\n" +
+            "            <p><strong>GalaxyPhoto1</strong> will be able to view your public profile.</p>\n" +
+            "          </div>\n" +
+            "\n" +
+            "          <div class=\"form-group\">\n" +
+            "  <form action=\"/oauth/authorize\" accept-charset=\"UTF-8\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" autocomplete=\"off\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"isLH5OH/VdYG98ZMgmTXQe1UMqKCDRK0f/gt4HUJL7le5GFgZI2mn0YWS3R5wmoeOHFdvvLWboGjsnlAd+WnjQ==\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"client_id\" id=\"client_id\" value=\"_iqBL9niuq522850mGnzK4x82TH1Mt52BzmQRke0NNE\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"redirect_uri\" id=\"redirect_uri\" value=\"urn:ietf:wg:oauth:2.0:oob\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"state\" id=\"state\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"response_type\" id=\"response_type\" value=\"code\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"scope\" id=\"scope\" value=\"public\" autocomplete=\"off\" />\n" +
+            "    <input type=\"submit\" name=\"commit\" value=\"Continue as bac\" class=\"btn btn-default btn-block-level\" data-disable-with=\"···\" />\n" +
+            "</form>\n" +
+            "</div> <!-- close .form-group -->\n" +
+            "\n" +
+            "<div class=\"form-group\">\n" +
+            "  <form action=\"/oauth/authorize\" accept-charset=\"UTF-8\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" autocomplete=\"off\" /><input type=\"hidden\" name=\"_method\" value=\"delete\" autocomplete=\"off\" /><input type=\"hidden\" name=\"authenticity_token\" value=\"m5OzBRAtqbjd/ZR3JvzFVDvoJztFLl1F3D31EKHbTk5PtRWBlV9a8Z0cGU/dWngL7s1IJzX1IXAAd6GwozfGeg==\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"client_id\" id=\"client_id\" value=\"_iqBL9niuq522850mGnzK4x82TH1Mt52BzmQRke0NNE\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"redirect_uri\" id=\"redirect_uri\" value=\"urn:ietf:wg:oauth:2.0:oob\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"state\" id=\"state\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"response_type\" id=\"response_type\" value=\"code\" autocomplete=\"off\" />\n" +
+            "    <input type=\"hidden\" name=\"scope\" id=\"scope\" value=\"public\" autocomplete=\"off\" />\n" +
+            "    <input type=\"submit\" name=\"commit\" value=\"Cancel\" class=\"btn btn-link\" data-disable-with=\"···\" />\n" +
+            "</form></div> <!-- close .form-group -->\n" +
+            "\n" +
+            "        </div> <!-- close .col -->\n" +
+            "      </div> <!-- close .row -->\n" +
+            "    </div>\n" +
+            "  </div>\n" +
+            "</div> <!-- close .container -->\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "  <script>\n" +
+            "    (function (window) {\n" +
+            "      var currentUser = {\n" +
+            "        id: 12753713\n" +
+            "      };\n" +
+            "\n" +
+            "      // attach any properties needed\n" +
+            "      // \n" +
+            "      // ex:\n" +
+            "      // \n" +
+            "      // currentUser.fullName = 'bac nguyen';\n" +
+            "\n" +
+            "      window.currentUser = currentUser;\n" +
+            "    })(window);\n" +
+            "  </script>\n" +
+            "\n" +
+            "<script src=\"https://unsplash.com/assets/global-01e11e81595c3a0773e49b2f221edb79a00fc95a1de058f20fdcc70d66f0d5f7.js\"></script>\n" +
+            "\n" +
+            "\n" +
+            "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-21SLH4J369\"></script>\n" +
+            "<script>\n" +
+            "  window.dataLayer = window.dataLayer || [];\n" +
+            "  function gtag(){dataLayer.push(arguments);}\n" +
+            "  gtag('js', new Date());\n" +
+            "\n" +
+            "  gtag('config', 'G-21SLH4J369');\n" +
+            "</script>\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "  <script>\n" +
+            "    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];\n" +
+            "    p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)\n" +
+            "    };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;\n" +
+            "    n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,\"script\",'//d1fc8wv8zag5ca.cloudfront.net/2.5.2/sp.js','snowplow'));\n" +
+            "\n" +
+            "    window.snowplow('newTracker', 'sn-unsp-0', 'collector.unsplash.com', {\n" +
+            "      platform: 'web',\n" +
+            "      cookieDomain: '.unsplash.com'\n" +
+            "    });\n" +
+            "\n" +
+            "    if (typeof currentUser === 'object') {\n" +
+            "    \twindow.snowplow('setUserId', currentUser.id);\n" +
+            "    }\n" +
+            "\n" +
+            "    window.snowplow('enableActivityTracking', 10, 10);\n" +
+            "    window.snowplow('trackPageView');\n" +
+            "  </script>\n" +
+            "\n" +
+            "  <script>\n" +
+            "    var _comscore = _comscore || [];\n" +
+            "    _comscore.push({ c1: \"2\", c2: \"32343279\" });\n" +
+            "    (function() {\n" +
+            "      var s = document.createElement(\"script\"), el = document.getElementsByTagName(\"script\")[0]; s.async = true;\n" +
+            "      s.src = (document.location.protocol == \"https:\" ? \"https://sb\" : \"http://b\") + \".scorecardresearch.com/beacon.js\";\n" +
+            "      el.parentNode.insertBefore(s, el);\n" +
+            "    })();\n" +
+            "  </script>\n" +
+            "  <noscript>\n" +
+            "    <img src=\"https://sb.scorecardresearch.com/p?c1=2&c2=32343279&cv=2.0&cj=1\" />\n" +
+            "  </noscript>\n" +
+            "\n" +
+            "\n" +
+            "</body>\n" +
+            "</html>"
+
 }

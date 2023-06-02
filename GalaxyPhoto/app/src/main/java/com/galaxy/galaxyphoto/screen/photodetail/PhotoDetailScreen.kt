@@ -1,11 +1,12 @@
 package com.galaxy.galaxyphoto.screen.photodetail
 
 import androidx.compose.animation.Crossfade
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material3.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
@@ -38,12 +39,17 @@ import com.google.gson.Gson
 import org.koin.androidx.compose.getViewModel
 
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewModel()) {
     val context = LocalContext.current
     val navController = RouterManager.current.navController
     var isSeePicture by remember { mutableStateOf(false) }
     var isReLoad by rememberSaveable { mutableStateOf(true) }
+    var isShowAvatar by remember { mutableStateOf(false) }
+//    val listState = rememberLazyGridState()
+//    var tag by remember { mutableStateOf("") }
+//    var pageNo by remember { mutableStateOf(1) }
 
 
     fun searchPhotoTags(model: PhotoModel) {
@@ -71,10 +77,14 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
     }
 
     BaseBackground(modifier = Modifier) {
-        Crossfade(targetState = isSeePicture) {
-            when (it) {
-                true ->
-                    ItemPhoto(
+        if (isShowAvatar) {
+            showAvatarUser(homeViewModel.photoModelDetail.user.profileImage.large) {
+                isShowAvatar = false
+            }
+        } else {
+            Crossfade(targetState = isSeePicture) {
+                when (it) {
+                    true -> ItemPhoto(
                         homeViewModel.photoModelDetail.urls.full,
                         modifier = Modifier
                             .fillMaxSize()
@@ -84,60 +94,61 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
                         isSeePicture = false
                     }
 
-                else ->
-                    BaseScrollview(modifier = Modifier.fillMaxHeight()) {
-                        ItemPhoto(homeViewModel.photoModelDetail.urls.full)
-                        GroupUserAction(homeViewModel.photoModelDetail, onSeeProfile = {
-                            navController?.navigate(
-                                DestinationNameWithParam.getUserProfile(
-                                    Gson().toJson(homeViewModel.photoModelDetail.user)
+                    else ->
+                        BaseScrollview(modifier = Modifier.fillMaxHeight()) {
+                            ItemPhoto(homeViewModel.photoModelDetail.urls.full)
+                            GroupUserAction(homeViewModel.photoModelDetail, onSeeProfile = {
+                                navController?.navigate(
+                                    DestinationNameWithParam.getUserProfile(
+                                        Gson().toJson(homeViewModel.photoModelDetail.user)
+                                    )
                                 )
-                            )
-                        }, onSeePicture = {
-                            isSeePicture = true
-                        }) {
+                            }, onSeePicture = {
+                                isSeePicture = true
+                            }, onShowAvatar = {}) {
 //                            homeViewModel.downLoadPhoto(
 //                                context, homeViewModel.photoModelDetail.id
 //                            )
 //                            {}
-                            (context as MainActivity).requestRxPermissions(
-                                onGranted = {
-                                    downloadFileFromUrl(
-                                        homeViewModel.photoModelDetail.urls.full,
-                                        context,
-                                        getRandomString(5)
-                                    )
-                                }
-                            )
-                        }
-                        Column(
-                            Modifier
-                                .padding(top = 12.dp)
-                                .clip(Shapes25dp.large)
-                                .background(Color.White.copy(0.1f))
-                                .padding(horizontal = 6.dp)
-                                .fillMaxWidth()
-                        ) {
-                            Text(
-                                text = "Photo Suggestion",
-                                fontWeight = FontWeight.SemiBold,
-                                color = Color.White,
-                                fontSize = 18.sp,
-                                modifier = Modifier
-                                    .padding(vertical = 15.dp)
-                                    .align(Alignment.CenterHorizontally),
-                            )
-                            FlowRow {
-                                homeViewModel.listPhotoDetail.forEach {
-                                    ItemContentDetail(it, onLongPress = {}) { modelSelect ->
-                                        navController?.navigate(
-                                            DestinationNameWithParam.getPhotoDetail(modelSelect.id)
+                                (context as MainActivity).requestRxPermissions(
+                                    onGranted = {
+                                        downloadFileFromUrl(
+                                            homeViewModel.photoModelDetail.urls.full,
+                                            context,
+                                            getRandomString(5)
                                         )
+                                    }
+                                )
+                            }
+                            Column(
+                                Modifier
+                                    .padding(top = 12.dp)
+                                    .clip(Shapes25dp.large)
+                                    .background(Color.White.copy(0.1f))
+                                    .padding(horizontal = 6.dp)
+                                    .fillMaxWidth()
+                            ) {
+                                Text(
+                                    text = "Photo Suggestion",
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = Color.White,
+                                    fontSize = 18.sp,
+                                    modifier = Modifier
+                                        .padding(vertical = 15.dp)
+                                        .align(Alignment.CenterHorizontally),
+                                )
+                                FlowRow {
+                                    homeViewModel.listPhotoDetail.forEach {
+                                        ItemContentDetail(it, onLongPress = {}) { modelSelect ->
+                                            navController?.navigate(
+                                                DestinationNameWithParam.getPhotoDetail(modelSelect.id)
+                                            )
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
+                }
             }
         }
     }
@@ -157,7 +168,8 @@ fun ItemPhoto(
 
     Box(modifier = modifier) {
         BaseResourceUrl(
-            url = url, modifier = Modifier,
+            url = url,
+            modifier = Modifier,
             contentScale = if (isShowPicture) ContentScale.Fit else ContentScale.Crop
         )
         Row {

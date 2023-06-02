@@ -7,6 +7,18 @@ class DestinationName(isParam: Boolean = false) {
         "splashscreen"
     }
 
+    val loginScreen = if (isParam) {
+        "loginScreen"
+    } else {
+        "loginScreen"
+    }
+
+    val loginWebView = if (isParam) {
+        "loginWebView?${ParamName.URL_WEB_VIEW}={${ParamName.URL_WEB_VIEW}}"
+    } else {
+        "loginWebView"
+    }
+
     val bottomBar = if (isParam) {
         "bottomBar"
     } else {
@@ -29,5 +41,7 @@ class DestinationName(isParam: Boolean = false) {
     } else {
         "createCollection"
     }
+
+
 
 }

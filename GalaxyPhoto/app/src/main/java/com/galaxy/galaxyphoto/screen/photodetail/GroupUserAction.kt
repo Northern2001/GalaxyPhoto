@@ -1,9 +1,10 @@
 package com.galaxy.galaxyphoto.screen.photodetail
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -12,12 +13,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.galaxy.galaxyphoto.MainActivity
+import com.galaxy.galaxyphoto.base.BaseBackground
 import com.galaxy.galaxyphoto.base.BaseButton
 import com.galaxy.galaxyphoto.base.CircleImage
-import com.galaxy.galaxyphoto.common.downloadFileFromUrl
-import com.galaxy.galaxyphoto.common.getRandomString
-import com.galaxy.galaxyphoto.common.requestRxPermissions
 import com.galaxy.galaxyphoto.model.photo.PhotoModel
 import com.galaxy.galaxyphoto.ui.theme.Shapes25dpBottom
 
@@ -26,9 +24,11 @@ fun GroupUserAction(
     model: PhotoModel,
     onSeeProfile: () -> Unit,
     onSeePicture: () -> Unit,
+    onShowAvatar: () -> Unit,
     saveImage: () -> Unit
 ) {
     val context = LocalContext.current
+
     Column(
         modifier = Modifier
             .clip(Shapes25dpBottom.large)
@@ -36,15 +36,18 @@ fun GroupUserAction(
             .padding(horizontal = 12.dp)
     ) {
         Row(
-            modifier = Modifier
-                .padding(vertical = 20.dp),
+            modifier = Modifier.padding(vertical = 20.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             CircleImage(
                 url = model.user.profileImage.large,
                 size = 36,
-            ) {}
-            Column(modifier = Modifier.padding(start = 12.dp)) {
+            ) { onShowAvatar() }
+            Column(
+                Modifier
+                    .padding(start = 12.dp)
+                    .fillMaxWidth(0.6f)
+            ) {
                 Text(
                     text = model.user.name,
                     color = Color.White,
@@ -76,11 +79,25 @@ fun GroupUserAction(
             }
             Spacer(modifier = Modifier.width(10.dp))
             BaseButton(
-                title = "Save",
-                background = Color.Red
+                title = "Save", background = Color.Red
             ) {
                 saveImage()
             }
         }
+    }
+}
+
+@Composable
+fun showAvatarUser(url: String, onHideAvatar: () -> Unit) {
+    BaseBackground(
+        modifier = Modifier.clickable { onHideAvatar() },
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    )
+    {
+        CircleImage(
+            url = url,
+            size = 200,
+        ) {}
     }
 }
