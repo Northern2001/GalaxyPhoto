@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "432863888315",
+    "project_id": "galaxyphoto-ca5c5",
+    "storage_bucket": "galaxyphoto-ca5c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432863888315:android:dab54ee76516126ae0fa9e",
+        "android_client_info": {
+          "package_name": "com.galaxy.galaxyphoto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432863888315-ugmohv08ovisjenigopj21h6riova24q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.galaxy.galaxyphoto",
+            "certificate_hash": "c51e76a7918f18d2aa6f3e2eda47b08fc49581fd"
+          }
+        },
+        {
+          "client_id": "432863888315-72o8ddiggt6pn84o7i9hldgfr1cgrca7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGxOeasC28lza0BJxUMSUIpGwWSrIHynY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432863888315-72o8ddiggt6pn84o7i9hldgfr1cgrca7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

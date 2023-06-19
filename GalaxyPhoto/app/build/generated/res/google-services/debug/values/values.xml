@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">432863888315-72o8ddiggt6pn84o7i9hldgfr1cgrca7.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">432863888315</string>
+    <string name="google_api_key" translatable="false">AIzaSyBGxOeasC28lza0BJxUMSUIpGwWSrIHynY</string>
+    <string name="google_app_id" translatable="false">1:432863888315:android:dab54ee76516126ae0fa9e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBGxOeasC28lza0BJxUMSUIpGwWSrIHynY</string>
+    <string name="google_storage_bucket" translatable="false">galaxyphoto-ca5c5.appspot.com</string>
+    <string name="project_id" translatable="false">galaxyphoto-ca5c5</string>
+</resources>

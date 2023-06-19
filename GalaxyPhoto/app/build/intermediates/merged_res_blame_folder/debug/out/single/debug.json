@@ -1,186 +1,186 @@
 [
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-hdpi_logo_app_round.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-hdpi/logo_app_round.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-hdpi_logo_app_foreground.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-hdpi/logo_app_foreground.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/xml_backup_rules.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xhdpi_logo_app.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xhdpi/logo_app.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_person.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_person.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxhdpi_logo_app_round.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxhdpi/logo_app_round.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-hdpi_logo_app_round.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-hdpi/logo_app_round.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_three_dot_horizoltal.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_three_dot_horizoltal.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-mdpi_logo_app_foreground.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-mdpi/logo_app_foreground.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/xml_backup_rules.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/xml/backup_rules.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/xml_data_extraction_rules.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/xml/data_extraction_rules.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxxhdpi_logo_app.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxxhdpi/logo_app.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xhdpi_logo_app_foreground.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xhdpi/logo_app_foreground.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_bg_login.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/bg_login.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxxhdpi_logo_app_round.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxxhdpi/logo_app_round.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-anydpi-v26_logo_app_round.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-anydpi-v26/logo_app_round.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-hdpi_logo_app_foreground.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-hdpi/logo_app_foreground.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-mdpi_logo_app_foreground.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-mdpi/logo_app_foreground.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-hdpi_logo_app.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-hdpi/logo_app.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_close.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_close.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_bg.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/bg.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic__success.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic__success.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxhdpi_logo_app.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxhdpi/logo_app.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-hdpi_logo_app.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-hdpi/logo_app.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-mdpi_logo_app_round.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-mdpi/logo_app_round.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_app_logo.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/app_logo.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_home.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_home.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-mdpi_logo_app.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-mdpi/logo_app.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxxhdpi_logo_app_round.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxxhdpi/logo_app_round.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_back.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_back.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_search.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_search.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-mdpi_logo_app_round.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-mdpi/logo_app_round.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_error.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_error.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_person.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_person.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/xml_data_extraction_rules.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxhdpi_logo_app.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxhdpi/logo_app.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic__success.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic__success.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_home.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_home.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_three_dot_horizoltal.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_three_dot_horizoltal.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_launcher_background.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xhdpi_logo_app_foreground.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xhdpi/logo_app_foreground.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_add.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_add.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxhdpi_logo_app_foreground.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxhdpi/logo_app_foreground.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-mdpi_logo_app.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-mdpi/logo_app.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_search.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_search.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxxhdpi_logo_app.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxxhdpi/logo_app.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xhdpi_logo_app_round.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xhdpi/logo_app_round.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_close.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_close.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-anydpi-v26_logo_app.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-anydpi-v26/logo_app.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_bg_login.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/bg_login.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxhdpi_logo_app_foreground.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxhdpi/logo_app_foreground.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-anydpi-v26_logo_app.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-anydpi-v26/logo_app.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_collection.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_collection.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xhdpi_logo_app.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xhdpi/logo_app.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxxhdpi_logo_app_foreground.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxxhdpi/logo_app_foreground.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxxhdpi_logo_app_foreground.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxxhdpi/logo_app_foreground.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_bg.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/bg.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_back.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_back.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_add.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_add.xml"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-anydpi-v26_logo_app_round.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-anydpi-v26/logo_app_round.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xxhdpi_logo_app_round.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xxhdpi/logo_app_round.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/drawable_ic_error.xml.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/drawable/ic_error.xml"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_app_logo.png.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/app_logo.png"
     },
     {
-        "merged": "com.galaxy.galaxyphoto.app-merged_res-58:/mipmap-xhdpi_logo_app_round.png.flat",
-        "source": "com.galaxy.galaxyphoto.app-main-60:/mipmap-xhdpi/logo_app_round.png"
+        "merged": "com.galaxy.galaxyphoto.app-merged_res-62:/drawable_ic_collection.xml.flat",
+        "source": "com.galaxy.galaxyphoto.app-main-64:/drawable/ic_collection.xml"
     }
 ]

@@ -1,60 +1,64 @@
-com.galaxy.galaxyphoto.app-activity-1.5.1-0 /home/eco0800-bacnp/.gradle/caches/transforms-3/000c5cc4ef4a14599583d3dbf0f8b4d2/transformed/activity-1.5.1/res
-com.galaxy.galaxyphoto.app-runtime-saveable-1.3.1-1 /home/eco0800-bacnp/.gradle/caches/transforms-3/05bcdf7d47650c868be32be38cd6c426/transformed/runtime-saveable-1.3.1/res
-com.galaxy.galaxyphoto.app-appcompat-1.2.0-2 /home/eco0800-bacnp/.gradle/caches/transforms-3/12babce7ab0063513146144891b9fa6b/transformed/appcompat-1.2.0/res
-com.galaxy.galaxyphoto.app-lifecycle-viewmodel-compose-2.5.0-rc01-3 /home/eco0800-bacnp/.gradle/caches/transforms-3/15230c92bd4b4ccd38436956db78c5f6/transformed/lifecycle-viewmodel-compose-2.5.0-rc01/res
-com.galaxy.galaxyphoto.app-material-1.3.1-4 /home/eco0800-bacnp/.gradle/caches/transforms-3/19bea6e637c19a0f53b69c6f8b90d021/transformed/material-1.3.1/res
-com.galaxy.galaxyphoto.app-ui-tooling-preview-1.3.0-5 /home/eco0800-bacnp/.gradle/caches/transforms-3/1dc2833e47d72f78a4e472dce5ea7f43/transformed/ui-tooling-preview-1.3.0/res
-com.galaxy.galaxyphoto.app-core-ktx-1.8.0-6 /home/eco0800-bacnp/.gradle/caches/transforms-3/1fe2eabb62365904d9fcb5b6887c7ce9/transformed/core-ktx-1.8.0/res
-com.galaxy.galaxyphoto.app-appcompat-resources-1.4.2-7 /home/eco0800-bacnp/.gradle/caches/transforms-3/20311640b335fe5f5697c06dc48ff5ef/transformed/appcompat-resources-1.4.2/res
-com.galaxy.galaxyphoto.app-runtime-1.3.2-8 /home/eco0800-bacnp/.gradle/caches/transforms-3/226608f9eaf473d1433d719755b92473/transformed/runtime-1.3.2/res
-com.galaxy.galaxyphoto.app-androidsvg-aar-1.4-9 /home/eco0800-bacnp/.gradle/caches/transforms-3/28e31ea51ed6cc275feef38e2947f9e0/transformed/androidsvg-aar-1.4/res
-com.galaxy.galaxyphoto.app-animation-1.3.1-10 /home/eco0800-bacnp/.gradle/caches/transforms-3/2ab0d577cd2e6d46e35516dc00357c1f/transformed/animation-1.3.1/res
-com.galaxy.galaxyphoto.app-lifecycle-viewmodel-savedstate-2.5.1-11 /home/eco0800-bacnp/.gradle/caches/transforms-3/39a9408e1d0613f41ea27cd20304c38f/transformed/lifecycle-viewmodel-savedstate-2.5.1/res
-com.galaxy.galaxyphoto.app-ui-graphics-1.3.1-12 /home/eco0800-bacnp/.gradle/caches/transforms-3/3ec4db6aedc5db5456e3e1978b6b226f/transformed/ui-graphics-1.3.1/res
-com.galaxy.galaxyphoto.app-core-1.8.0-13 /home/eco0800-bacnp/.gradle/caches/transforms-3/460b7625a1e74dbd2001c19e556b941d/transformed/core-1.8.0/res
-com.galaxy.galaxyphoto.app-navigation-runtime-2.5.0-rc02-14 /home/eco0800-bacnp/.gradle/caches/transforms-3/5ed61dbff26665e5e311e728678fda5f/transformed/navigation-runtime-2.5.0-rc02/res
-com.galaxy.galaxyphoto.app-glide-4.13.0-15 /home/eco0800-bacnp/.gradle/caches/transforms-3/6846804b551c59c13d6fa9dcd597c473/transformed/glide-4.13.0/res
-com.galaxy.galaxyphoto.app-runtime-livedata-1.3.2-16 /home/eco0800-bacnp/.gradle/caches/transforms-3/6a4fd61eb71a9da4b7755c0c5aa7fb04/transformed/runtime-livedata-1.3.2/res
-com.galaxy.galaxyphoto.app-ui-tooling-data-1.3.0-17 /home/eco0800-bacnp/.gradle/caches/transforms-3/6c6af6ca5862164e90f1b8cacea9fd38/transformed/ui-tooling-data-1.3.0/res
-com.galaxy.galaxyphoto.app-coil-base-2.2.2-18 /home/eco0800-bacnp/.gradle/caches/transforms-3/6f7990e75dc2abb4b0f45a1997bd6486/transformed/coil-base-2.2.2/res
-com.galaxy.galaxyphoto.app-ui-text-1.3.1-19 /home/eco0800-bacnp/.gradle/caches/transforms-3/7026f2e1d87973ce5121689d034abd0e/transformed/ui-text-1.3.1/res
-com.galaxy.galaxyphoto.app-savedstate-ktx-1.2.0-20 /home/eco0800-bacnp/.gradle/caches/transforms-3/72928f2ee1c2c989bd3da8bacdf74984/transformed/savedstate-ktx-1.2.0/res
-com.galaxy.galaxyphoto.app-activity-compose-1.5.1-21 /home/eco0800-bacnp/.gradle/caches/transforms-3/7309fb4890eaf7e42b3b6232241afebc/transformed/activity-compose-1.5.1/res
-com.galaxy.galaxyphoto.app-ui-util-1.3.1-22 /home/eco0800-bacnp/.gradle/caches/transforms-3/7a0e69bd9fe2038a41b4f0d3c30c1a9e/transformed/ui-util-1.3.1/res
-com.galaxy.galaxyphoto.app-lifecycle-runtime-2.5.1-23 /home/eco0800-bacnp/.gradle/caches/transforms-3/7e5328cc875e893c3b0b4e20044111d6/transformed/lifecycle-runtime-2.5.1/res
-com.galaxy.galaxyphoto.app-profileinstaller-1.2.0-24 /home/eco0800-bacnp/.gradle/caches/transforms-3/82647c292950ea381edf190edf70dd4c/transformed/profileinstaller-1.2.0/res
-com.galaxy.galaxyphoto.app-navigation-common-2.5.0-rc02-25 /home/eco0800-bacnp/.gradle/caches/transforms-3/8b493fdc319d00a56d27a310b9730f92/transformed/navigation-common-2.5.0-rc02/res
-com.galaxy.galaxyphoto.app-material-icons-core-1.3.1-26 /home/eco0800-bacnp/.gradle/caches/transforms-3/8be676d8026683f02c15acbd1489c980/transformed/material-icons-core-1.3.1/res
-com.galaxy.galaxyphoto.app-hilt-navigation-compose-1.0.0-27 /home/eco0800-bacnp/.gradle/caches/transforms-3/9090652e377f3078a5153817900be9e3/transformed/hilt-navigation-compose-1.0.0/res
-com.galaxy.galaxyphoto.app-customview-poolingcontainer-1.0.0-28 /home/eco0800-bacnp/.gradle/caches/transforms-3/90f3e7f806d3f6a386a7977571b93e98/transformed/customview-poolingcontainer-1.0.0/res
-com.galaxy.galaxyphoto.app-lifecycle-livedata-core-2.5.1-29 /home/eco0800-bacnp/.gradle/caches/transforms-3/927034b8533e157c50f1aa17de5d7c51/transformed/lifecycle-livedata-core-2.5.1/res
-com.galaxy.galaxyphoto.app-material-ripple-1.3.1-30 /home/eco0800-bacnp/.gradle/caches/transforms-3/97cf283e13a56e01b42ca90c0f70fa7b/transformed/material-ripple-1.3.1/res
-com.galaxy.galaxyphoto.app-hilt-navigation-1.0.0-31 /home/eco0800-bacnp/.gradle/caches/transforms-3/9b83b1114ff8a5c6fe8a218084ebe165/transformed/hilt-navigation-1.0.0/res
-com.galaxy.galaxyphoto.app-material3-1.0.0-32 /home/eco0800-bacnp/.gradle/caches/transforms-3/9e92aa8a1dac7b33f9b441fc09912c6d/transformed/material3-1.0.0/res
-com.galaxy.galaxyphoto.app-ui-test-manifest-1.3.0-33 /home/eco0800-bacnp/.gradle/caches/transforms-3/a158aba461e6f18367236ee7372fa33a/transformed/ui-test-manifest-1.3.0/res
-com.galaxy.galaxyphoto.app-annotation-experimental-1.1.0-34 /home/eco0800-bacnp/.gradle/caches/transforms-3/a16b444b2d291e79232daa1f71c5862c/transformed/annotation-experimental-1.1.0/res
-com.galaxy.galaxyphoto.app-lifecycle-viewmodel-2.5.1-35 /home/eco0800-bacnp/.gradle/caches/transforms-3/a8efb4cfefc835fe36cdda24db2834dd/transformed/lifecycle-viewmodel-2.5.1/res
-com.galaxy.galaxyphoto.app-ui-geometry-1.3.1-36 /home/eco0800-bacnp/.gradle/caches/transforms-3/aacd030950e3eaa45f0c4f67f355c9d3/transformed/ui-geometry-1.3.1/res
-com.galaxy.galaxyphoto.app-fragment-1.3.6-37 /home/eco0800-bacnp/.gradle/caches/transforms-3/ae9c3bf859741e7ce8fad421521f271d/transformed/fragment-1.3.6/res
-com.galaxy.galaxyphoto.app-lifecycle-runtime-ktx-2.5.1-38 /home/eco0800-bacnp/.gradle/caches/transforms-3/b5a89f0203925aba90f36dad01f3e8a5/transformed/lifecycle-runtime-ktx-2.5.1/res
-com.galaxy.galaxyphoto.app-savedstate-1.2.0-39 /home/eco0800-bacnp/.gradle/caches/transforms-3/bfb890106c85926416091cfe70a7a0f1/transformed/savedstate-1.2.0/res
-com.galaxy.galaxyphoto.app-hilt-lifecycle-viewmodel-1.0.0-alpha03-40 /home/eco0800-bacnp/.gradle/caches/transforms-3/c0a2dce39b54f5ccd9147351b5fb9002/transformed/hilt-lifecycle-viewmodel-1.0.0-alpha03/res
-com.galaxy.galaxyphoto.app-ui-unit-1.3.1-41 /home/eco0800-bacnp/.gradle/caches/transforms-3/c2303e96462220047039e24b8482b39a/transformed/ui-unit-1.3.1/res
-com.galaxy.galaxyphoto.app-navigation-compose-2.5.0-rc02-42 /home/eco0800-bacnp/.gradle/caches/transforms-3/c81fde518592eaf08216b314dcaebbbb/transformed/navigation-compose-2.5.0-rc02/res
-com.galaxy.galaxyphoto.app-navigation-runtime-ktx-2.5.0-rc02-43 /home/eco0800-bacnp/.gradle/caches/transforms-3/c8e029ce3d64ddc8009340f3e4209bcf/transformed/navigation-runtime-ktx-2.5.0-rc02/res
-com.galaxy.galaxyphoto.app-startup-runtime-1.1.1-44 /home/eco0800-bacnp/.gradle/caches/transforms-3/cae0ca7531cc1eb8fa89bb6c6e08feb3/transformed/startup-runtime-1.1.1/res
-com.galaxy.galaxyphoto.app-foundation-1.3.1-45 /home/eco0800-bacnp/.gradle/caches/transforms-3/d05ed0cea15936544d0ab8e0ddf0f82c/transformed/foundation-1.3.1/res
-com.galaxy.galaxyphoto.app-lifecycle-viewmodel-ktx-2.5.1-46 /home/eco0800-bacnp/.gradle/caches/transforms-3/d290cac246cd6dc58e5421efd532612c/transformed/lifecycle-viewmodel-ktx-2.5.1/res
-com.galaxy.galaxyphoto.app-foundation-layout-1.3.1-47 /home/eco0800-bacnp/.gradle/caches/transforms-3/df615b8f8f8f25ee23008634c43ffcfd/transformed/foundation-layout-1.3.1/res
-com.galaxy.galaxyphoto.app-ui-1.3.1-48 /home/eco0800-bacnp/.gradle/caches/transforms-3/e1bc76257ae7bdec38a2ac2d4fecf75e/transformed/ui-1.3.1/res
-com.galaxy.galaxyphoto.app-activity-ktx-1.5.1-49 /home/eco0800-bacnp/.gradle/caches/transforms-3/e5e269f77ee0aeaa01df7237d44b5dad/transformed/activity-ktx-1.5.1/res
-com.galaxy.galaxyphoto.app-animation-core-1.3.1-50 /home/eco0800-bacnp/.gradle/caches/transforms-3/f439f3bc690d10dba5629c4dbac8274a/transformed/animation-core-1.3.1/res
-com.galaxy.galaxyphoto.app-ui-tooling-1.3.0-51 /home/eco0800-bacnp/.gradle/caches/transforms-3/feb159b796b53f77c1f9a2364dda7ae0/transformed/ui-tooling-1.3.0/res
-com.galaxy.galaxyphoto.app-navigation-common-ktx-2.5.0-rc02-52 /home/eco0800-bacnp/.gradle/caches/transforms-3/ff9dd0f52a376cf45f1216d6517afab2/transformed/navigation-common-ktx-2.5.0-rc02/res
-com.galaxy.galaxyphoto.app-resValues-53 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/build/generated/res/resValues/debug
-com.galaxy.galaxyphoto.app-rs-54 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/build/generated/res/rs/debug
-com.galaxy.galaxyphoto.app-packageDebugResources-55 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-com.galaxy.galaxyphoto.app-packageDebugResources-56 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-com.galaxy.galaxyphoto.app-merged_res-57 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/build/intermediates/merged_res/debug
-com.galaxy.galaxyphoto.app-debug-58 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/src/debug/res
-com.galaxy.galaxyphoto.app-main-59 /home/eco0800-bacnp/Documents/GalaxyPhoto/GalaxyPhoto/app/src/main/res
+com.galaxy.galaxyphoto.app-ui-unit-1.3.1-0 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/10f7a631240b448c54e9e06923e0f273/transformed/ui-unit-1.3.1/res
+com.galaxy.galaxyphoto.app-animation-1.3.1-1 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/1479a4d284f1295e9315150aeadebb93/transformed/animation-1.3.1/res
+com.galaxy.galaxyphoto.app-ui-geometry-1.3.1-2 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/1b0bd1e4af45bd0ff10a6ae2b637b8a1/transformed/ui-geometry-1.3.1/res
+com.galaxy.galaxyphoto.app-lifecycle-viewmodel-savedstate-2.5.1-3 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/1dc9a7bf58e1add27370fe0bad2c4507/transformed/lifecycle-viewmodel-savedstate-2.5.1/res
+com.galaxy.galaxyphoto.app-material-ripple-1.3.1-4 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/230fe9f2651ed7d7d207933ec0e3acd3/transformed/material-ripple-1.3.1/res
+com.galaxy.galaxyphoto.app-activity-compose-1.5.1-5 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/3426a40c21c1f1ca8d36116877169750/transformed/activity-compose-1.5.1/res
+com.galaxy.galaxyphoto.app-ui-1.3.1-6 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/3613074072185df0e90fc8756cf5033e/transformed/ui-1.3.1/res
+com.galaxy.galaxyphoto.app-material3-1.0.0-7 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/378039f95b994a271f6e091997bd5ff2/transformed/material3-1.0.0/res
+com.galaxy.galaxyphoto.app-ui-graphics-1.3.1-8 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/37fcf67c447c1e4ba54c3dcce05f9365/transformed/ui-graphics-1.3.1/res
+com.galaxy.galaxyphoto.app-ui-util-1.3.1-9 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/4652a83d700137a5ef21219fd6bafe43/transformed/ui-util-1.3.1/res
+com.galaxy.galaxyphoto.app-appcompat-resources-1.4.2-10 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/5055f76361f62380c3c8e42c1c13b539/transformed/appcompat-resources-1.4.2/res
+com.galaxy.galaxyphoto.app-core-1.8.0-11 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/521dee49a7318a2a6e5e8f47799e4982/transformed/core-1.8.0/res
+com.galaxy.galaxyphoto.app-lifecycle-viewmodel-ktx-2.5.1-12 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/58604255acc6daa40d35a98d93703fbc/transformed/lifecycle-viewmodel-ktx-2.5.1/res
+com.galaxy.galaxyphoto.app-activity-ktx-1.5.1-13 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/5db6b2d5d83b6cd0b4279a8c860f78bf/transformed/activity-ktx-1.5.1/res
+com.galaxy.galaxyphoto.app-ui-tooling-data-1.3.0-14 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/63e8f1c25ea2a82d5a796298b1af3c4f/transformed/ui-tooling-data-1.3.0/res
+com.galaxy.galaxyphoto.app-ui-text-1.3.1-15 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/659f5c8f32607477f2257f1c1f2992cb/transformed/ui-text-1.3.1/res
+com.galaxy.galaxyphoto.app-navigation-common-ktx-2.5.0-rc02-16 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/6e2b250ae8d5f3d3934a7e088cd205bc/transformed/navigation-common-ktx-2.5.0-rc02/res
+com.galaxy.galaxyphoto.app-fragment-1.3.6-17 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/6f6574078489b839fc54ecde7cd5fe68/transformed/fragment-1.3.6/res
+com.galaxy.galaxyphoto.app-runtime-1.3.2-18 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/74d383d32b8f196e36c30beba394ba59/transformed/runtime-1.3.2/res
+com.galaxy.galaxyphoto.app-appcompat-1.2.0-19 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/751884fad657ae3162f5579bea4bc43e/transformed/appcompat-1.2.0/res
+com.galaxy.galaxyphoto.app-material-1.3.1-20 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/75ff94fe7b4ee1c0404725db8e2012fc/transformed/material-1.3.1/res
+com.galaxy.galaxyphoto.app-runtime-saveable-1.3.1-21 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/769a9acbe5a0be3cae17d93328c5e41e/transformed/runtime-saveable-1.3.1/res
+com.galaxy.galaxyphoto.app-lifecycle-livedata-core-2.5.1-22 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/7d4c586381b70db81536a1fb1766ee5b/transformed/lifecycle-livedata-core-2.5.1/res
+com.galaxy.galaxyphoto.app-savedstate-ktx-1.2.0-23 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/81f27ea3d71e3ef5f9be2596e61d6ad2/transformed/savedstate-ktx-1.2.0/res
+com.galaxy.galaxyphoto.app-startup-runtime-1.1.1-24 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/88b4cdf622e12a0f84d2216e85bc036d/transformed/startup-runtime-1.1.1/res
+com.galaxy.galaxyphoto.app-foundation-1.3.1-25 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/8ab0a208644b60ffd44a4d8c4e1c50e8/transformed/foundation-1.3.1/res
+com.galaxy.galaxyphoto.app-firebase-common-20.3.3-26 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/92fb7db83026266258487edb685bcc8c/transformed/firebase-common-20.3.3/res
+com.galaxy.galaxyphoto.app-ui-test-manifest-1.3.0-27 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/99c9d3a1594b8c5adcc95e9b54208306/transformed/ui-test-manifest-1.3.0/res
+com.galaxy.galaxyphoto.app-lifecycle-runtime-ktx-2.5.1-28 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/9b377f04f154c3a9787ce14f4ccd5090/transformed/lifecycle-runtime-ktx-2.5.1/res
+com.galaxy.galaxyphoto.app-material-icons-core-1.3.1-29 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/9c21571bab261cb9f8f3127e9ac5c7ad/transformed/material-icons-core-1.3.1/res
+com.galaxy.galaxyphoto.app-annotation-experimental-1.1.0-30 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/a4ce4fac75d8f95d75dffd94aac7bcd5/transformed/annotation-experimental-1.1.0/res
+com.galaxy.galaxyphoto.app-runtime-livedata-1.3.2-31 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/a73041d7668464664958b2da03a012dd/transformed/runtime-livedata-1.3.2/res
+com.galaxy.galaxyphoto.app-navigation-runtime-ktx-2.5.0-rc02-32 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/a82503d9916ac704b453e2f14bddff9b/transformed/navigation-runtime-ktx-2.5.0-rc02/res
+com.galaxy.galaxyphoto.app-activity-1.5.1-33 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/a8bedb80cf29eda8148339ae14c77811/transformed/activity-1.5.1/res
+com.galaxy.galaxyphoto.app-hilt-navigation-1.0.0-34 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/abd0f9074526aaab65ebbe563defa433/transformed/hilt-navigation-1.0.0/res
+com.galaxy.galaxyphoto.app-foundation-layout-1.3.1-35 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/b164f7da453402f4eeb777269c7a98b5/transformed/foundation-layout-1.3.1/res
+com.galaxy.galaxyphoto.app-customview-poolingcontainer-1.0.0-36 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/b4dbbf4c9c2d7759931c9714e41c9fbd/transformed/customview-poolingcontainer-1.0.0/res
+com.galaxy.galaxyphoto.app-lifecycle-viewmodel-compose-2.5.0-rc01-37 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/b5504f1e7586fa239c40d94585f130bc/transformed/lifecycle-viewmodel-compose-2.5.0-rc01/res
+com.galaxy.galaxyphoto.app-play-services-basement-18.1.0-38 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/b76a485dff0f8f2f9ff10256108e682b/transformed/play-services-basement-18.1.0/res
+com.galaxy.galaxyphoto.app-androidsvg-aar-1.4-39 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/bd1a22a404729273db14fcf7f08ecaee/transformed/androidsvg-aar-1.4/res
+com.galaxy.galaxyphoto.app-hilt-lifecycle-viewmodel-1.0.0-alpha03-40 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/c57187baa8e23a2e316e82bfc1bd0c4c/transformed/hilt-lifecycle-viewmodel-1.0.0-alpha03/res
+com.galaxy.galaxyphoto.app-lifecycle-viewmodel-2.5.1-41 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/c8e75c3f7f7a4b684c989486316cf7be/transformed/lifecycle-viewmodel-2.5.1/res
+com.galaxy.galaxyphoto.app-navigation-common-2.5.0-rc02-42 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/cde907c7ffee8434c224f904c08a2ff1/transformed/navigation-common-2.5.0-rc02/res
+com.galaxy.galaxyphoto.app-navigation-runtime-2.5.0-rc02-43 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/d30b4aa5a6ef0b549ede6e8f6ba6af10/transformed/navigation-runtime-2.5.0-rc02/res
+com.galaxy.galaxyphoto.app-lifecycle-runtime-2.5.1-44 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/d52f6a73d3e2c1c3e2b0ee67e173f5de/transformed/lifecycle-runtime-2.5.1/res
+com.galaxy.galaxyphoto.app-savedstate-1.2.0-45 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/da9b534f000c5ddb04189622f6dd608c/transformed/savedstate-1.2.0/res
+com.galaxy.galaxyphoto.app-coil-base-2.2.2-46 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/dfedd6dd038798cb70718adc58d48d70/transformed/coil-base-2.2.2/res
+com.galaxy.galaxyphoto.app-core-ktx-1.8.0-47 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/e095fc6818e5697fe4bd9511a44cab6c/transformed/core-ktx-1.8.0/res
+com.galaxy.galaxyphoto.app-glide-4.13.0-48 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/e335710ce5b4580709c8c7e2bb4b9f17/transformed/glide-4.13.0/res
+com.galaxy.galaxyphoto.app-ui-tooling-1.3.0-49 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/e3df354974bb17567dacce4e5cd17345/transformed/ui-tooling-1.3.0/res
+com.galaxy.galaxyphoto.app-animation-core-1.3.1-50 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/e68ed1c18326c344685d8701b40dc513/transformed/animation-core-1.3.1/res
+com.galaxy.galaxyphoto.app-profileinstaller-1.2.0-51 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/edbc8f10c4e97c1f6dc314e591859940/transformed/profileinstaller-1.2.0/res
+com.galaxy.galaxyphoto.app-hilt-navigation-compose-1.0.0-52 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/f00894a9a8053aab70b9b8ca20ff856e/transformed/hilt-navigation-compose-1.0.0/res
+com.galaxy.galaxyphoto.app-navigation-compose-2.5.0-rc02-53 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/fb25320c60146d3abec9932280fc7637/transformed/navigation-compose-2.5.0-rc02/res
+com.galaxy.galaxyphoto.app-ui-tooling-preview-1.3.0-54 /home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/fb3c2b912287625c4a6b52de01df14cb/transformed/ui-tooling-preview-1.3.0/res
+com.galaxy.galaxyphoto.app-res-55 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/generated/crashlytics/res/debug
+com.galaxy.galaxyphoto.app-google-services-56 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/generated/res/google-services/debug
+com.galaxy.galaxyphoto.app-resValues-57 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/generated/res/resValues/debug
+com.galaxy.galaxyphoto.app-rs-58 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/generated/res/rs/debug
+com.galaxy.galaxyphoto.app-packageDebugResources-59 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.galaxy.galaxyphoto.app-packageDebugResources-60 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.galaxy.galaxyphoto.app-merged_res-61 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/build/intermediates/merged_res/debug
+com.galaxy.galaxyphoto.app-debug-62 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/src/debug/res
+com.galaxy.galaxyphoto.app-main-63 /home/eco0800-bacnp/Desktop/My Project/myproject/GalaxyPhoto/GalaxyPhoto/app/src/main/res

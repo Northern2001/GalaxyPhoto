@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.galaxy.galaxyphoto.app-mergeDebugResources-56:/values-v16/values-v16.xml",
+            "outputFile": "com.galaxy.galaxyphoto.app-mergeDebugResources-60:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/home/eco0800-bacnp/.gradle/caches/transforms-3/460b7625a1e74dbd2001c19e556b941d/transformed/core-1.8.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/home/eco0800-bacnp/.gradle/caches/transforms-3/12babce7ab0063513146144891b9fa6b/transformed/appcompat-1.2.0/res/values-v16/values-v16.xml",
+                    "source": "/home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/751884fad657ae3162f5579bea4bc43e/transformed/appcompat-1.2.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/521dee49a7318a2a6e5e8f47799e4982/transformed/core-1.8.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.galaxy.galaxyphoto.app-mergeDebugResources-56:/values-port/values-port.xml",
+            "outputFile": "com.galaxy.galaxyphoto.app-mergeDebugResources-60:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/eco0800-bacnp/.gradle/caches/transforms-3/12babce7ab0063513146144891b9fa6b/transformed/appcompat-1.2.0/res/values-port/values-port.xml",
+                    "source": "/home/eco0800-bacnp/Desktop/My Project/gradle/gradle-7.3.3/bin/caches/transforms-3/751884fad657ae3162f5579bea4bc43e/transformed/appcompat-1.2.0/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

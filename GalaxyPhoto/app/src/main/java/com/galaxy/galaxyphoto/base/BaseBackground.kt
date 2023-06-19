@@ -28,12 +28,14 @@ fun BaseBackground(
         indicator = { state, refreshTrigger ->
             SwipeRefreshIndicator(
                 state = state,
+                scale = false,
+                fade = false,
                 refreshTriggerDistance = refreshTrigger,
                 arrowEnabled = false,
                 contentColor = Color.Transparent,
                 backgroundColor = Color.Transparent,
+                elevation = 0.dp
             )
-
         },
         onRefresh = { onRefresh?.invoke() }) {
         Column(
@@ -47,6 +49,4 @@ fun BaseBackground(
             content()
         }
     }
-
-
 }

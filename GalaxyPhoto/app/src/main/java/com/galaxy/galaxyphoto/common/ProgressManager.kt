@@ -38,8 +38,4 @@ class ProgressManager : ViewModel() {
     fun loading() {
         current.isLoading = true
     }
-
-    fun onRefresh(){
-
-    }
 }

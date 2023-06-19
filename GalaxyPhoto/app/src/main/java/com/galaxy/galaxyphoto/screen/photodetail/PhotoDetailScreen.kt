@@ -1,11 +1,9 @@
 package com.galaxy.galaxyphoto.screen.photodetail
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -27,7 +25,7 @@ import com.galaxy.galaxyphoto.base.BaseScrollview
 import com.galaxy.galaxyphoto.common.downloadFileFromUrl
 import com.galaxy.galaxyphoto.common.getRandomString
 import com.galaxy.galaxyphoto.common.requestRxPermissions
-import com.galaxy.galaxyphoto.model.photo.PhotoModel
+import com.galaxy.galaxyphoto.ext.InfiniteListHandler
 import com.galaxy.galaxyphoto.nav.DestinationName
 import com.galaxy.galaxyphoto.nav.DestinationNameWithParam
 import com.galaxy.galaxyphoto.nav.RouterManager
@@ -38,7 +36,6 @@ import com.google.accompanist.flowlayout.FlowRow
 import com.google.gson.Gson
 import org.koin.androidx.compose.getViewModel
 
-
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewModel()) {
@@ -47,16 +44,16 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
     var isSeePicture by remember { mutableStateOf(false) }
     var isReLoad by rememberSaveable { mutableStateOf(true) }
     var isShowAvatar by remember { mutableStateOf(false) }
-//    val listState = rememberLazyGridState()
-//    var tag by remember { mutableStateOf("") }
-//    var pageNo by remember { mutableStateOf(1) }
+    val listState = rememberLazyListState()
 
 
-    fun searchPhotoTags(model: PhotoModel) {
-        if (model.tags.isNotEmpty()) {
-            homeViewModel.searchPhotos(context, model.tags[0].title) {
-                homeViewModel.listPhotoDetail = it.results
-            }
+    fun searchPhotoTags(isLoadMore: Boolean = false) {
+        if (homeViewModel.photoModelDetail.tags.isNotEmpty()) {
+            homeViewModel.searchPhotos(
+                context,
+                query = homeViewModel.photoModelDetail.tags[0].title,
+                isLoadMore = isLoadMore
+            )
         }
     }
 
@@ -65,7 +62,7 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
         if (isReLoad) {
             homeViewModel.getPhotoDetail(context, idPhoto) {
                 homeViewModel.photoModelDetail = it
-                searchPhotoTags(it)
+                searchPhotoTags()
             }
         }
     }
@@ -95,7 +92,7 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
                     }
 
                     else ->
-                        BaseScrollview(modifier = Modifier.fillMaxHeight()) {
+                        BaseScrollview(state = listState, modifier = Modifier.fillMaxHeight()) {
                             ItemPhoto(homeViewModel.photoModelDetail.urls.full)
                             GroupUserAction(homeViewModel.photoModelDetail, onSeeProfile = {
                                 navController?.navigate(
@@ -105,11 +102,8 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
                                 )
                             }, onSeePicture = {
                                 isSeePicture = true
-                            }, onShowAvatar = {}) {
-//                            homeViewModel.downLoadPhoto(
-//                                context, homeViewModel.photoModelDetail.id
-//                            )
-//                            {}
+                            }, onShowAvatar = {}
+                            ) {
                                 (context as MainActivity).requestRxPermissions(
                                     onGranted = {
                                         downloadFileFromUrl(
@@ -151,6 +145,10 @@ fun PhotoDetailScreen(idPhoto: String, homeViewModel: HomeViewModel = getViewMod
                 }
             }
         }
+    }
+    listState.InfiniteListHandler {
+        homeViewModel.pageSearch++
+        searchPhotoTags(true)
     }
 }
 

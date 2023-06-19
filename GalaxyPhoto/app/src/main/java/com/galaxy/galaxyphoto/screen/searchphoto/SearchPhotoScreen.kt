@@ -17,8 +17,6 @@ import com.galaxy.galaxyphoto.nav.DestinationNameWithParam
 import com.galaxy.galaxyphoto.nav.RouterManager
 import com.galaxy.galaxyphoto.screen.photodetail.ItemContentDetail
 import com.galaxy.galaxyphoto.viewmodel.HomeViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import org.koin.androidx.compose.getViewModel
 
@@ -29,32 +27,24 @@ fun SearchPhotoScreen(homeViewModel: HomeViewModel = getViewModel()) {
     val navController = RouterManager.current.navController
     var searchValue by remember { mutableStateOf("") }
     var isSearch by remember { mutableStateOf(false) }
-    val uiScope = CoroutineScope(Dispatchers.Main)
     val listState = rememberLazyGridState()
-    var page by remember { mutableStateOf(1) }
-
 
     fun searchPhoto(isLoadMore: Boolean = false) {
-        page = if (isLoadMore) page else 1
-        homeViewModel.searchPhotos(context, query = searchValue, page = page) {
-            homeViewModel.listPhotoSearch =
-                if (isLoadMore)
-                    homeViewModel.listPhotoSearch.toMutableList().also { newData ->
-                        newData.addAll(it.results)
-                    }
-                else
-                    it.results
+        if (isSearch && searchValue.isNotEmpty()) {
+            homeViewModel.searchPhotos(
+                context,
+                query = searchValue,
+                isLoadMore = isLoadMore
+            )
         }
     }
 
     LaunchedEffect(searchValue) {
-        if (isSearch) {
-            delay(Contains.TIME_SEARCH)
-            searchPhoto()
-        }
+        delay(Contains.TIME_SEARCH)
+        searchPhoto()
     }
 
-    BaseBackground(Modifier, onRefresh = {searchPhoto()}) {
+    BaseBackground(Modifier, onRefresh = { searchPhoto() }) {
         BaseTextField(
             value = searchValue,
             onChangeValue = {
@@ -72,13 +62,12 @@ fun SearchPhotoScreen(homeViewModel: HomeViewModel = getViewModel()) {
                         DestinationNameWithParam.getPhotoDetail(it.id)
                     )
                 })
-
             }
         })
     }
 
     listState.InfiniteListHandler {
-        page++
+        homeViewModel.pageSearch++
         searchPhoto(true)
     }
 }
