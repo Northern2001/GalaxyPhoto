@@ -6,6 +6,21 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        configRelease {
+            keyAlias "galaxyphoto"
+            keyPassword "galaxyphoto"
+            storeFile file("../key_store.jks")
+            storePassword "galaxyphoto"
+        }
+        configStaging {
+            keyAlias "galaxyphoto"
+            keyPassword "galaxyphoto"
+            storeFile file("../dev_key_store.jks")
+            storePassword "galaxyphoto"
+        }
+    }
+
     namespace 'com.galaxy.galaxyphoto'
     compileSdk 33
 
@@ -21,11 +36,24 @@ android {
             useSupportLibrary true
         }
     }
+    def app_is_debuggable_package = true // true để có thể debug
+    def app_is_product_package = true // true sử dụng product package
 
     buildTypes {
         release {
             minifyEnabled false
+            debuggable app_is_debuggable_package
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", "\"https://api.unsplash.com/\""
+            signingConfig (app_is_product_package ? signingConfigs.configRelease : signingConfigs.configDebug)
+        }
+
+        dev {
+            minifyEnabled false
+            debuggable app_is_debuggable_package
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", "\"https://api.unsplash.com/\""
+            signingConfig (app_is_product_package ? signingConfigs.configRelease : signingConfigs.configDebug)
         }
     }
     compileOptions {

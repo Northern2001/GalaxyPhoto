@@ -1,6 +1,7 @@
 package com.galaxy.galaxyphoto.di
 
 import android.content.Context
+import com.galaxy.galaxyphoto.BuildConfig.BASE_URL
 import com.galaxy.galaxyphoto.domain.Contains
 import com.galaxy.galaxyphoto.domain.impl.AuthRepositoryImpl
 import com.galaxy.galaxyphoto.domain.impl.CollectionRepositoryImpl
@@ -13,10 +14,7 @@ import com.galaxy.galaxyphoto.domain.service.CollectionService
 import com.galaxy.galaxyphoto.domain.service.HomeService
 import com.galaxy.galaxyphoto.helper.JsonHelper
 import com.google.gson.Gson
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -30,7 +28,7 @@ val apisModule = module {
     single<HomeService> {
         createWebService(
             context = get(),
-            baseUrl = Contains.BASE_URL,
+            baseUrl = BASE_URL,
             gson = get()
         )
     }
@@ -38,7 +36,7 @@ val apisModule = module {
     single<CollectionService> {
         createWebService(
             context = get(),
-            baseUrl = Contains.BASE_URL,
+            baseUrl = BASE_URL,
             gson = get()
         )
     }
